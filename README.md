@@ -9,9 +9,9 @@ Something will be put here when I actually have stuff
 
 ## To do list
 - Decide on framework and have a clear idea on how and why
-- Have a basic app that has nothing
+- Have a basic app that has nothing but a first page (start a new project; load from cloud; )
 - The app can have different pages to go to during formation change
-- Draw the basic UI that has no functions (A side bar with buttons and infos for the dancers; there will be on stage and off stage areas, if dots are deleted, they will never be on stage; grids)
+- Draw the basic UI that has no functions (A side bar with buttons and infos for the dancers; there will be on stage and off stage areas, if dots are deleted, they will never be on stage; grids; stage front stage back - able to change)
 - Able to draw plain dots on the pages with numbers and when you go to the next page, the initial position of the dot will be what it was in the previous page
 - Dragging on a dot can change its position
 - Able to delete dots (Offstages dots are not deleted)
@@ -20,7 +20,7 @@ Something will be put here when I actually have stuff
 - Able to hide the names of the dots
 - Able to have teacher view vs. student view (student view make the self dot much bigger and brighter)
 - View mode vs. edit mode
-- click on a dot can change its position (standing vs sitting vs lying down)
+- double click on a dot can change its position (standing vs sitting vs lying down)
 - have music sequence playing at the top of the space and guide formation change (i.e. sequence during which time are for this formation) 
 - during the changing time, the dots can find their routes to the next formation
 - have access to a website page to watch the video in order to have the formation (this maybe not very necessary)
@@ -28,6 +28,7 @@ Something will be put here when I actually have stuff
 - have different stage sizes
 - upload to cloud and share among teammates
 - upload to cloud and share with other ppl (with token)
+- click on dots and change their positions together (or circle)
 
 Side bar buttons
 - a button to guide to changes to the dots
