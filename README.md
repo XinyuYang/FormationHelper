@@ -7,6 +7,17 @@ Something something
 ## Features
 Something will be put here when I actually have stuff
 
+## Developmental work
+We are currently working on the teacher side of the app. According to the survey we handed out, most teachers use laptop. Under this consideration, we decided to first build a web app.
+### Using React
+Some references
+React vs Vue: https://www.monterail.com/blog/vue-vs-react-2019
+React vs Angular: https://programmingwithmosh.com/react/react-vs-angular/
+React tutorial: https://reactjs.org/docs/getting-started.html
+
+### Weekly documentation
+Week 0(Jun 23):Building foundations
+
 ## To do list
 - Decide on framework and have a clear idea on how and why
 - Have a basic app that has nothing but a first page (start a new project; load from cloud; )
