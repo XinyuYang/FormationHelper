@@ -12,14 +12,15 @@ We are currently working on the teacher side of the app. According to the survey
 ### Using React
 Some references
 React vs Vue: https://www.monterail.com/blog/vue-vs-react-2019
+
 React vs Angular: https://programmingwithmosh.com/react/react-vs-angular/
+
 React tutorial: https://reactjs.org/docs/getting-started.html
 
 ### Weekly documentation
-Week 0(Jun 23):Building foundations
+Week 0(Jun 23): Framework/Library decided. Building foundations
 
 ## To do list
-- Decide on framework and have a clear idea on how and why
 - Have a basic app that has nothing but a first page (start a new project; load from cloud; )
 - The app can have different pages to go to during formation change
 - Draw the basic UI that has no functions (A side bar with buttons and infos for the dancers; there will be on stage and off stage areas, if dots are deleted, they will never be on stage; grids; stage front stage back - able to change)
