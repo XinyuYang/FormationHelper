@@ -20,7 +20,73 @@ React tutorial: https://reactjs.org/docs/getting-started.html
 ### Weekly documentation
 Week 0(Jun 23): Framework/Library decided. Building foundations
 
-## To do list
+Week 1(Jun 30): Studied for basic React stuff. Worked on the detailed plan.
+
+
+## Ideas and Meeting notes
+28号meeting主要内容
+1. 先给大家介绍一下具体的app，不知道大家那两个视频都看了没有
+    1. market research cyh
+        1. 一段音乐的快慢
+        2. 体操、健美操用的 8个formation 用siri来控制 投在大屏幕上 缺点是不能加音乐 也不知道每一个人 只有一个个formation的名字 没有点 不知道具体谁站在那里 适合排过队形复习的
+        3. Playbook 平面图 加点上去 还可以署名 可以拖动 但是不能通过Siri控制 只能手一个个点 但是没有音乐 不知道哪里换队形 不是三维的 不知道什么时候蹲下
+        4. Pinterest上舞蹈博主会collect formation
+        5. 首先必须要有点；做成三维；最好能加上音乐；最好能署名
+2. 具体的平台用的会是React 抽查一下有没有人知道react 介绍一下具体的差别
+3. 发表一下任务 主要的任务：在GitHub跟大家分享了之后 自己拉一个branch 然后在新的branch里
+    1. 可以打开最初始的内容
+    2. 进行一些稍微的改动之后commit到自己的branch里面
+    3. 里面readme写的内容几乎都过期了所以不需要看也可以
+4. 这些任务希望在下周之前可以完成 越快越好 如果进行的改动越特别越好 
+
+7.5 meeting
+Current Idea:
+Stage One - Non Moving Formations
+1. Welcome Interface
+    1. Currently only adding the buttons, they don’t need to lead to anywhere (but we need the Create New button to lead to the Main Page for easier future testings)
+    2. Main buttons
+        1. Create New
+        2. Load Local
+        3. Download Online
+        4. Credits
+    3. It’s important to recognize that in the future there should be a leading page for the user to input the number of dancers and names/colors of these dancer dots. 
+2. Main Page(See examples)
+    1. Side Menu (left): activate by hovering to the very left or by clicking the top left button, which disappears when the menu is activated, but reappears when the menu is no longer available; this menu is mainly in charge of main actions
+        1. Show/Hide Music(Content changes with the condition of Top popup) 
+        2. Show/Hide Pages(Content changes with the condition of Bottom popup)
+        3. Change Dance Name
+        4. Change Dancer Number
+    2. Side Menu (right): activate by hovering to the very right or by clicking the top right button, which disappears when the menu is activated, but reappears when the menu is no longer available.; this menu is mainly in charge of actions related to the particular formation for this page
+        1. Default formations
+        2. Copy previous formation
+        3. Change dots information (You can change the name/color of all the dots - dots all have a number to them)
+        4. Settings
+            1. Reverse front stage/backstage order
+            2. Change stage size
+    3. Top popup (Appears after the Show Music button is clicked)
+    4. Bottom popup (Appears by default; showing the current page and total pages)
+        1. You can change the page you are looking at
+        2. There’s a + button at the end of all pages that you can click to create a new formation
+        3. Click and drag on a certain page can move its position
+    5. Main Page adjustment to current formation
+        1. It should have front stage backstage listed; which can be changed by settings
+        2. There should be an onstage offstage area (Dots/Dancers that are not onstage should not be deleted, instead they are either in the onstage area or offstage area)
+        3. Click and drag on a current dot in order to change its position
+        4. Double click on a dot to change its name and/or color
+3. Credits Page
+    1. A single page that lists all the contributors’ names, any references if we have in the future, and GitHub repository’s link
+
+Current Task for next week.
+1. Welcome Interface and 4 buttons
+    1. If this task is done, work on the page that follows Create New, where users are asked to input dance name; dancers number
+2. Main Page two side menus (buttons not required; but the ability of being activated by hovering & the side button is required as well as the deactivation of these menus)
+    1. If this task is done, work on the buttons listed above
+    2. If 2.1 is done, work on activation of top and bottom popup; important to know that the top and bottom popup should be behind the left and right side menus when coexists.
+3. Main Page onstage/offstage; Front stage/Backstage exhibition
+    1. If this task is done, work on the link between Credits to the Credits Page
+
+
+## To do list (deprecated)
 - Have a basic app that has nothing but a first page (start a new project; load from cloud; )
 - The app can have different pages to go to during formation change
 - Draw the basic UI that has no functions (A side bar with buttons and infos for the dancers; there will be on stage and off stage areas, if dots are deleted, they will never be on stage; grids; stage front stage back - able to change)
