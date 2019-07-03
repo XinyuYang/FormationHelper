@@ -50,7 +50,8 @@ Stage One - Non Moving Formations
         3. Download Online
         4. Credits
     3. It’s important to recognize that in the future there should be a leading page for the user to input the number of dancers and names/colors of these dancer dots. 
-2. Main Page(See examples)
+2. Main Page(See Example)
+![Example](../master/images/Example.jpg)
     1. Side Menu (left): activate by hovering to the very left or by clicking the top left button, which disappears when the menu is activated, but reappears when the menu is no longer available; this menu is mainly in charge of main actions
         1. Show/Hide Music(Content changes with the condition of Top popup) 
         2. Show/Hide Pages(Content changes with the condition of Bottom popup)
