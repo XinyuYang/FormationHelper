@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .App-logo {
@@ -31,3 +34,69 @@
     transform: rotate(360deg);
   }
 }
+
+/* Above is example css*/
+#top-bar {
+  height: 15%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  /* For demo purpose*/
+  border: 3px solid red;
+  background: white;
+}
+
+#side-bars {
+  height: 70%;
+  width: 100%;
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  background-color: grey;
+  z-index: 1;
+}
+
+#left-side-bar {
+  height: 100%;
+  width: 20%;
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  padding: auto;
+  /* For demo purpose*/
+  border: 3px solid blue;
+  background: white;
+}
+
+#right-side-bar {
+  height: 100%;
+  width: 20%;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  padding: auto;
+  /* For demo purpose*/
+  border: 3px solid blue;
+  background: white;
+}
+
+#bottom-bar {
+  height: 15%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  /* For demo purpose*/
+  border: 3px solid red;
+  background: white;
+}
+
+.box {
+  padding: 5px;
+  margin: 2px;
+}
+
+
+
