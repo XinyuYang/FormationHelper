@@ -1,39 +1,39 @@
-.App {
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
+/*.App {*/
+  /*text-align: center;*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*position: relative;*/
+/*}*/
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+/*.App-logo {*/
+  /*animation: App-logo-spin infinite 20s linear;*/
+  /*height: 40vmin;*/
+  /*pointer-events: none;*/
+/*}*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/*.App-header {*/
+  /*background-color: #282c34;*/
+  /*min-height: 100vh;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  /*font-size: calc(10px + 2vmin);*/
+  /*color: white;*/
+/*}*/
 
-.App-link {
-  color: #61dafb;
-}
+/*.App-link {*/
+  /*color: #61dafb;*/
+/*}*/
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*@keyframes App-logo-spin {*/
+  /*from {*/
+    /*transform: rotate(0deg);*/
+  /*}*/
+  /*to {*/
+    /*transform: rotate(360deg);*/
+  /*}*/
+/*}*/
 
 /* Above is example css*/
 #top-bar {
@@ -41,7 +41,6 @@
   width: 100%;
   position: absolute;
   top: 0;
-  z-index: 1;
   /* For demo purpose*/
   border: 3px solid red;
   background: white;
@@ -54,15 +53,12 @@
   top: 15%;
   bottom: 15%;
   background-color: grey;
-  z-index: 1;
 }
 
 #left-side-bar {
   height: 100%;
   width: 20%;
   position: absolute;
-  z-index: 1;
-  margin: auto;
   padding: auto;
   /* For demo purpose*/
   border: 3px solid blue;
@@ -74,8 +70,6 @@
   width: 20%;
   right: 0;
   position: absolute;
-  z-index: 1;
-  margin: auto;
   padding: auto;
   /* For demo purpose*/
   border: 3px solid blue;
@@ -87,7 +81,6 @@
   width: 100%;
   position: absolute;
   bottom: 0;
-  z-index: 1;
   /* For demo purpose*/
   border: 3px solid red;
   background: white;
