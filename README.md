@@ -51,7 +51,7 @@ Stage One - Non Moving Formations
         4. Credits
     3. It’s important to recognize that in the future there should be a leading page for the user to input the number of dancers and names/colors of these dancer dots. 
 2. Main Page(See Example)
-![Example](../master/images/Example.jpg)
+![Example](images/Example.jpg)
     1. Side Menu (left): activate by hovering to the very left or by clicking the top left button, which disappears when the menu is activated, but reappears when the menu is no longer available; this menu is mainly in charge of main actions
         1. Show/Hide Music(Content changes with the condition of Top popup) 
         2. Show/Hide Pages(Content changes with the condition of Bottom popup)
@@ -85,6 +85,10 @@ Current Task for next week.
     2. If 2.1 is done, work on activation of top and bottom popup; important to know that the top and bottom popup should be behind the left and right side menus when coexists.
 3. Main Page onstage/offstage; Front stage/Backstage exhibition
     1. If this task is done, work on the link between Credits to the Credits Page
+4. Create New first Page (the page after Create New button is clicked and happens before Main Page to gather information)
+    1. number of dancers
+    2. the name of dance
+    3. *load music
 
 
 ## To do list (deprecated)
