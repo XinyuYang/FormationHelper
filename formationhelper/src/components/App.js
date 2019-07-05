@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../css/App.css';
 
 function App() {
   return (
-    <div className="container-fluid">
+    <div>
         <div id="top-bar" className="box">
             <p>This is the top bar</p>
         </div>
