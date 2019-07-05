@@ -78,14 +78,14 @@ Stage One - Non Moving Formations
     1. A single page that lists all the contributors’ names, any references if we have in the future, and GitHub repository’s link
 
 Current Task for next week.
-1. Welcome Interface and 4 buttons
+1. (Yuhan Chen) Welcome Interface and 4 buttons
     1. If this task is done, work on the page that follows Create New, where users are asked to input dance name; dancers number
 2. Main Page two side menus (buttons not required; but the ability of being activated by hovering & the side button is required as well as the deactivation of these menus)
     1. If this task is done, work on the buttons listed above
     2. If 2.1 is done, work on activation of top and bottom popup; important to know that the top and bottom popup should be behind the left and right side menus when coexists.
 3. Main Page onstage/offstage; Front stage/Backstage exhibition
     1. If this task is done, work on the link between Credits to the Credits Page
-4. Create New first Page (the page after Create New button is clicked and happens before Main Page to gather information)
+4. (Yuxiang Chen) Create New first Page (the page after Create New button is clicked and happens before Main Page to gather information)
     1. number of dancers
     2. the name of dance
     3. *load music
