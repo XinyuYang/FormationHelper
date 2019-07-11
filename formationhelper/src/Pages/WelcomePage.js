@@ -1,15 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-import "./CSS/WelcomePage.css"
-import newlogo from './Images/newlogo.png'
-=======
 import "../css/WelcomePage.css"
-import AppBar from "./Components/AppBar"
->>>>>>> d55d8994cb79f1d272f2a1d5ad9342cd43bacd17
 import Footer from "./Components/Footer";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import {makeStyles} from "@material-ui/core";
+import ButtonAppBar from "./Components/AppBar";
 
 const useStyles = makeStyles(theme => ({
     Buttons: {
@@ -21,6 +16,7 @@ export default function WelcomePage() {
     const classes = useStyles();
     return(
         <React.Fragment>
+            <ButtonAppBar/>
             <div className="App" >
                 <div>
                     <h1>Welcome to Formation Helper</h1>
