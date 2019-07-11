@@ -1,16 +1,29 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import Fab from '@material-ui/core/Fab';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import MoreIcon from '@material-ui/icons/MoreVert';
+import "../CSS/SideBar.css"
 
-const useStyles = makeStyles({
-  sideList: {
-    width: 250,
+
+const useStyles = makeStyles(theme => ({
+  root: {
+      flexGrow: 1,
   },
-});
+  menuButton: {
+      marginRight: theme.spacing(2),
+  },
+  sideList: {
+    width: 'auto',
+  },
+
+}));
 
 export default function TemporaryDrawer() {
   const classes = useStyles();
@@ -49,13 +62,22 @@ export default function TemporaryDrawer() {
 
 
   return (
-    <div>
-        <Fab onClick={toggleDrawer('left', true)}>L</Fab>
-        <Fab onClick={toggleDrawer('right', true)}>R</Fab>
+  <div className={classes.root}>
+    <AppBar position="static">
+      <Toolbar>
+        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu" 
+        onClick={toggleDrawer('left', true)}>
+          <MenuIcon />
+        </IconButton>
+        <IconButton edge="end" color="inherit" onClick={toggleDrawer('right', true)}>
+          <MoreIcon />
+        </IconButton>
         <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         {sideList('left')}</Drawer>
         <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
         {sideList('right')}</Drawer>
-    </div>
+      </Toolbar>
+    </AppBar>
+  </div>
   );
 }
