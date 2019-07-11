@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Footer from "./Components/Footer";
-import { FaGithub } from "react-icons/fa";
+// import { FaGithub } from "react-icons/fa";
 import Grid from "@material-ui/core/Grid";
 
 
@@ -46,7 +46,7 @@ export default function CreditPage() {
                     justify="center"
                     alignItems="center">
                 <Grid item>
-                  <FaGithub size={40} />
+                  {/* <FaGithub size={40} /> */}
                 </Grid>
                 <Grid>
                   <Typography variant="h5" align="center" color="textPrimary" paragraph>
