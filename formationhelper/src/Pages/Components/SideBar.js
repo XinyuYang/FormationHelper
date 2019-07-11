@@ -5,14 +5,11 @@ import Fab from '@material-ui/core/Fab';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import Icon from '@material-ui/core/Icon';
-
 
 const useStyles = makeStyles({
   sideList: {
     width: 250,
   },
-
 });
 
 export default function TemporaryDrawer() {
@@ -53,18 +50,12 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Fab onClick={toggleDrawer('left', true)}>
-        L
-      </Fab>
-      <Fab onClick={toggleDrawer('right', true)}>
-        R
-      </Fab>
-      <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
-        {sideList('left')}
-      </Drawer>
-      <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
-        {sideList('right')}
-      </Drawer>
+        <Fab onClick={toggleDrawer('left', true)}>L</Fab>
+        <Fab onClick={toggleDrawer('right', true)}>R</Fab>
+        <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
+        {sideList('left')}</Drawer>
+        <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
+        {sideList('right')}</Drawer>
     </div>
   );
 }

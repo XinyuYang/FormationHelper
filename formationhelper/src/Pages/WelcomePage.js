@@ -1,7 +1,6 @@
 import React from 'react';
 import "./CSS/WelcomePage.css"
 import newlogo from './Images/newlogo.png'
-import AppBar from "./Components/AppBar"
 import Footer from "./Components/Footer";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -17,7 +16,6 @@ export default function WelcomePage() {
     const classes = useStyles();
     return(
         <React.Fragment>
-            <AppBar/>
             <div className="App" >
                 <div>
                     <h1>Welcome to Formation Helper</h1>

@@ -5,7 +5,12 @@ import SideBar from './Components/SideBar';
 
 function MainPage() {
     return (
-        <SideBar/>
+        <div>
+            <SideBar/>
+            <div className='FormationCanvas'>
+
+            </div>
+        </div>
     );
 }
 
