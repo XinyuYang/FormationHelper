@@ -7,10 +7,10 @@ import CreditPage from "./CreditPage";
 
 function App() {
   return (
-      // Uncomment this to go to WelcomePage
       <React.Fragment>
-        <WelcomePage/>
-        <CreditPage/>
+        <MainPage/>
+        {/* <WelcomePage/> */}
+        {/* <CreditPage/> */}
       </React.Fragment>
   );
 }
