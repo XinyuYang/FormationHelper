@@ -1,21 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import Icon from '@material-ui/core/Icon';
+
 
 const useStyles = makeStyles({
-  list: {
+  sideList: {
     width: 250,
   },
-  fullList: {
-    width: 'auto',
-  },
+
 });
 
 export default function TemporaryDrawer() {
@@ -24,6 +21,9 @@ export default function TemporaryDrawer() {
     left: false,
     right: false,
   });
+  const currentList = {'left':['Show/Hide Music','Show/Hide Pages', 'Change Dance Name', 'Change Dancer Number'], 
+                       'right':['Default Formation', 'Copy previous formation', 'Change dots information',
+                                'Settings']};
 
   const toggleDrawer = (side, open) => event => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -41,10 +41,9 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {currentList[side].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+            <ListItemText primary={text}/>
           </ListItem>
         ))}
       </List>
@@ -54,8 +53,12 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer('left', true)}>Open Left</Button>
-      <Button onClick={toggleDrawer('right', true)}>Open Right</Button>
+      <Fab onClick={toggleDrawer('left', true)}>
+        L
+      </Fab>
+      <Fab onClick={toggleDrawer('right', true)}>
+        R
+      </Fab>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         {sideList('left')}
       </Drawer>
