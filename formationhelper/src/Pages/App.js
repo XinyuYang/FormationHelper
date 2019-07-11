@@ -6,6 +6,8 @@ import MainPage from "./MainPage";
 
 function App() {
   return (
+      // Uncomment this to go to WelcomePage
+      // <HomePage/>
       <MainPage/>
   );
 }
