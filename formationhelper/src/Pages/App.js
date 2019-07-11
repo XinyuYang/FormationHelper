@@ -8,9 +8,9 @@ import CreditPage from "./CreditPage";
 function App() {
   return (
       <React.Fragment>
+        <WelcomePage/>
         <MainPage/>
-        {/* <WelcomePage/> */}
-        {/* <CreditPage/> */}
+        <CreditPage/>
       </React.Fragment>
   );
 }
