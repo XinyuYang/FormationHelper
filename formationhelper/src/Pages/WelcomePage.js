@@ -1,6 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import "./CSS/WelcomePage.css"
 import newlogo from './Images/newlogo.png'
+=======
+import "../css/WelcomePage.css"
+import AppBar from "./Components/AppBar"
+>>>>>>> d55d8994cb79f1d272f2a1d5ad9342cd43bacd17
 import Footer from "./Components/Footer";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -27,7 +32,7 @@ export default function WelcomePage() {
                     <p>this is a text this is a text this is a text this is a text this is a text</p >
                     <p>this is a text this is a text this is a text this is a text this is a text</p >
                 </div>
-                < img src={newlogo} width="300px" height="300px"/>
+                < img src="http://hochstein.org/portals/0/gottaSingDance%20pic%20for%20web.jpg" width="600px" height="300px"/>
                 <div className={classes.Buttons}>
                     <Grid container spacing={2} justify="center">
                         <Grid item >

@@ -1,8 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
 import SideBar from './Components/SideBar';
 import FormationCanvas from './Components/FormationCanvas';
 import {Card, Grid, Paper} from '@material-ui/core';
 import {makeStyles} from "@material-ui/core";
+=======
+import '../css/MainPage.css';
+>>>>>>> d55d8994cb79f1d272f2a1d5ad9342cd43bacd17
 
 const useStyles = makeStyles(theme => ({
     items: {
