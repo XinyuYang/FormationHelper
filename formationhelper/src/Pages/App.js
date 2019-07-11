@@ -1,14 +1,18 @@
 import React from 'react';
 import logo from '../logo.svg';
 import '../css/App.css';
-import HomePage from "./HomePage";
+import CreditPage from "./CreditPage";
 import MainPage from "./MainPage";
+import WelcomePage from "./WelcomePage";
 
 function App() {
   return (
       // Uncomment this to go to WelcomePage
-      // <HomePage/>
-      <MainPage/>
+      <React.Fragment>
+        <WelcomePage/>
+        {/*<MainPage/>*/}
+        {/*<CreditPage/>*/}
+      </React.Fragment>
   );
 }
 
