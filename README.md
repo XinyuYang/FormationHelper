@@ -90,6 +90,19 @@ Current Task for next week.
     2. the name of dance
     3. *load music
 
+7.12 Meeting
+
+1. Discuss on some slight adjustment
+
+To do list:
+1. Router - page Shift
+2. Slight Css changes
+    1. Welcome page doesn't AppHeader
+    2. Other pages can have an AppHeader - but only with a Title and a going back button (going back to the WelcomePage)
+    3. Button sizes and canvas default size should be stable in MainPage
+3. Formation Canvas development - the construction (Write UML for the model)
+4. Knowing how to load music
+5. 
 
 ## To do list (deprecated)
 - Have a basic app that has nothing but a first page (start a new project; load from cloud; )
