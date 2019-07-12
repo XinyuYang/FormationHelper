@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -6,7 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-
+import Tabs from '@material-ui/core/Tabs'
+import Tab from '@material-ui/core/Tab'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -33,6 +35,13 @@ export default function ButtonAppBar() {
                     <Typography variant="h6" className={classes.title}>
                         Formation Helper
                     </Typography>
+
+                    <Tabs>
+                        <Tab label="Welcome" component={Link} to="/welcome"/>
+                        <Tab label="Main" component={Link} to="/main"/>
+                        <Tab label="credit" component={Link} to="/credit"/>
+                    </Tabs>
+
                     <Button color="inherit">Login</Button>
                 </Toolbar>
             </AppBar>

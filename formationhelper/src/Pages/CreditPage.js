@@ -7,6 +7,7 @@ import Container from '@material-ui/core/Container';
 import Footer from "./Components/Footer";
 // import { FaGithub } from "react-icons/fa";
 import Grid from "@material-ui/core/Grid";
+import Header from "./Components/Header"
 
 
 
@@ -23,13 +24,7 @@ export default function CreditPage() {
   const classes = useStyles();
   return (
       <React.Fragment>
-        <AppBar position="relative">
-          <Toolbar>
-            <Typography variant="h6" color="inherit" noWrap>
-              Credit Page
-            </Typography>
-          </Toolbar>
-        </AppBar>
+        <Header/>
         <main>
           {/* Main Unit */}
           <div className={classes.Content}>
