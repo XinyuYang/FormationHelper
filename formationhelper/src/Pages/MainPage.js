@@ -4,6 +4,7 @@ import FormationCanvas from './Components/FormationCanvas';
 import {Card, Grid, Paper} from '@material-ui/core';
 import {makeStyles} from "@material-ui/core";
 import '../css/MainPage.css';
+import Header from "./Components/Header"
 
 const useStyles = makeStyles(theme => ({
     items: {
@@ -17,7 +18,8 @@ function MainPage() {
 
     return (
         <React.Fragment>
-            <SideBar/>
+            <Header/>
+            {/*<SideBar/>*/}
             <Grid className={classes.items} container direction="column" justify="center" alignItems="center">
                 <Grid item><Paper>Front</Paper></Grid>
                 <Grid item><FormationCanvas /></Grid>
