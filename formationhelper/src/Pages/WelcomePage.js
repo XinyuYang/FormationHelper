@@ -1,13 +1,13 @@
 import React from 'react';
 // import newlogo from './Images/newlogo.png'
 import "../css/WelcomePage.css"
-import AppBar from "./Components/Header"
 import "../css/WelcomePage.css"
 import Footer from "./Components/Footer";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import {makeStyles} from "@material-ui/core";
 import Header from "./Components/Header";
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
     Buttons: {
@@ -35,7 +35,7 @@ export default function WelcomePage() {
                 <div className={classes.Buttons}>
                     <Grid container spacing={2} justify="center">
                         <Grid item >
-                            <Button variant="contained"  color="primary">
+                            <Button variant="contained"  color="primary" component={Link} to="/main">
                                 Create New
                             </Button>
                         </Grid>
@@ -50,7 +50,7 @@ export default function WelcomePage() {
                             </Button>
                         </Grid>
                         <Grid item>
-                            <Button variant="outlined" color="primary">
+                            <Button variant="outlined" color="primary" component={Link} to="/credit">
                                 Credits
                             </Button>
                         </Grid>
