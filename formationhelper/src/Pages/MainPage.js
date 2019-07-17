@@ -18,8 +18,8 @@ function MainPage() {
 
     return (
         <React.Fragment>
-            <Header/>
-            {/*<SideBar/>*/}
+            <Header headerTitle={"Main"}/>
+            <SideBar/>
             <Grid className={classes.items} container direction="column" justify="center" alignItems="center">
                 <Grid item><Paper>Front</Paper></Grid>
                 <Grid item><FormationCanvas /></Grid>

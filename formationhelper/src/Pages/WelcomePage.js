@@ -19,7 +19,7 @@ export default function WelcomePage() {
     const classes = useStyles();
     return(
         <React.Fragment>
-            <Header/>
+            <Header headerTitle={"Welcome to Formation Helper"}/>
             <div className="App" >
                 <div>
                     <h1>Welcome to Formation Helper</h1>

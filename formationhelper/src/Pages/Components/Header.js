@@ -5,10 +5,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -22,27 +18,19 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function ButtonAppBar() {
+
+export default (headerInfo) => {
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu">
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" className={classes.title}>
-                        Formation Helper
+                    <Typography variant="h6" className={headerInfo.headerTitle}>
+                        {headerInfo.headerTitle}
                     </Typography>
 
-                    <Tabs>
-                        <Tab label="Welcome" component={Link} to="/welcome"/>
-                        <Tab label="Main" component={Link} to="/main"/>
-                        <Tab label="credit" component={Link} to="/credit"/>
-                    </Tabs>
-
-                    <Button color="inherit">Login</Button>
+                    <Button color="inherit" justify="right">Login</Button>
                 </Toolbar>
             </AppBar>
         </div>

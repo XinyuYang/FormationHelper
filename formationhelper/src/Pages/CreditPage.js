@@ -22,7 +22,7 @@ export default function CreditPage() {
   const classes = useStyles();
   return (
       <React.Fragment>
-        <Header/>
+        <Header headerTitle={"Credits"}/>
         <main>
           {/* Main Unit */}
           <div className={classes.Content}>
