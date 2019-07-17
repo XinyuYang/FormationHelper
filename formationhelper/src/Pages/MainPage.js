@@ -16,6 +16,8 @@ const useStyles = makeStyles(theme => ({
 function MainPage() {
     const classes = useStyles();
 
+    const currentlyAtWelcome = window.location.pathname == "/";
+
     return (
         <React.Fragment>
             <Header headerTitle={"Main"}/>

@@ -63,13 +63,12 @@ export default function TemporaryDrawer() {
 
   return (
   <div className={classes.root}>
-    <AppBar position="static">
       <Toolbar>
         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu" 
         onClick={toggleDrawer('left', true)}>
           <MenuIcon />
         </IconButton>
-        <IconButton edge="end" color="inherit" onClick={toggleDrawer('right', true)}>
+        <IconButton alignSelf='flex-end' position="absolute" color="inherit" onClick={toggleDrawer('right', true)}>
           <MoreIcon />
         </IconButton>
         <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
@@ -77,7 +76,6 @@ export default function TemporaryDrawer() {
         <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
         {sideList('right')}</Drawer>
       </Toolbar>
-    </AppBar>
   </div>
   );
 }

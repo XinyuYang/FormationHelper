@@ -24,13 +24,18 @@ const useStyles = makeStyles(theme => ({
 export default (headerInfo) => {
     const classes = useStyles();
 
+    const currentlyAtWelcome = window.location.pathname == "/";
+
     return (
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton edge="start" component={Link} to="/">
-                        <ArrowBack/>
-                    </IconButton>
+                    {!currentlyAtWelcome && (
+                        <IconButton edge="start" component={Link} to="/">
+                            <ArrowBack/>
+                        </IconButton>
+                    )}
+                    
                     <Typography variant="h6" className={headerInfo.headerTitle}>
                         {headerInfo.headerTitle}
                     </Typography>
