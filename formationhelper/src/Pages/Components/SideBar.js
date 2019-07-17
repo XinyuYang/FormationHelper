@@ -64,17 +64,18 @@ export default function TemporaryDrawer() {
   return (
   <div className={classes.root}>
       <Toolbar>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu" 
-        onClick={toggleDrawer('left', true)}>
+        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu" onClick={toggleDrawer('left', true)}>
           <MenuIcon />
         </IconButton>
-        <IconButton alignSelf='flex-end' position="absolute" color="inherit" onClick={toggleDrawer('right', true)}>
+        <IconButton color="inherit" anchor="right" onClick={toggleDrawer('right', true)}>
           <MoreIcon />
         </IconButton>
         <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
-        {sideList('left')}</Drawer>
+          {sideList('left')}
+        </Drawer>
         <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
-        {sideList('right')}</Drawer>
+          {sideList('right')}
+        </Drawer>
       </Toolbar>
   </div>
   );

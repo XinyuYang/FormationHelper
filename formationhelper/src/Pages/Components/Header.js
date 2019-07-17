@@ -31,16 +31,16 @@ export default (headerInfo) => {
             <AppBar position="static">
                 <Toolbar>
                     {!currentlyAtWelcome && (
-                        <IconButton edge="start" component={Link} to="/">
+                        <IconButton edge="start" color='inherit' className={classes.menuButton} component={Link} to="/">
                             <ArrowBack/>
                         </IconButton>
                     )}
                     
-                    <Typography variant="h6" className={headerInfo.headerTitle}>
+                    <Typography variant="h6" className={classes.title}>
                         {headerInfo.headerTitle}
                     </Typography>
 
-                    <Button color="inherit" justify="right">Login</Button>
+                    <Button color="inherit">Login</Button>
                 </Toolbar>
             </AppBar>
         </div>
