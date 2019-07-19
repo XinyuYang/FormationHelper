@@ -107,16 +107,16 @@ To do list:
 Meeting for 7.19
 Tasks:
 1. Main Page styles changes
-    1. Two buttons 一左一右
-    2. Buttons 不应该占一条 而应该浮在页面上面
-    3. 页面中间的几个Label应该有固定大小 Stage和off Stage方块的区域，很大一块地方+中间会有字体标注，Front和Back可以是一条，不是一块区域
-    4. Drawer打开是黑色的好丑哦
+    1. Two buttons 一左一右 (rock)
+    2. Buttons 不应该占一条 而应该浮在页面上面 (rock)
+    3. 页面中间的几个Label应该有固定大小 Stage和off Stage方块的区域，很大一块地方+中间会有字体标注，Front和Back可以是一条，不是一块区域 (cyh)
+    4. Drawer打开是黑色的好丑哦 (cyx)
 2. Formation Dots
-    1. 在Stage和Off Stage的区域里有浅灰色的grid可以把dot放在上面
-    2. 有Dot的class 里面存储一些dot的information - position，dancer name，color
-    3. 在Welcome Page点进Create New的时候，应该有popup 需要录入一些基本资料，比如说Dance Name，Dancer Number， Load Music
+    1. 在Stage和Off Stage的区域里有浅灰色的grid可以把dot放在上面(cyh)
+    2. 有Dot的class 里面存储一些dot的information - position，dancer name，color (yxy)
+    3. 在Welcome Page点进Create New的时候，应该有popup 需要录入一些基本资料，比如说Dance Name，Dancer Number， Load Music (yxy)
 3. Main Page 两个Button的功能
-    1. Load Music
+    1. Load Music (cyx)
     2. Change Dance Name/Dancer Number
     3. Change dots information
 
