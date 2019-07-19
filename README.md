@@ -77,7 +77,7 @@ Stage One - Non Moving Formations
 3. Credits Page
     1. A single page that lists all the contributors’ names, any references if we have in the future, and GitHub repository’s link
 
-Current Task for next week.
+Current Task for 7.12.
 1. (Yuhan Chen) Welcome Interface and 4 buttons
     1. If this task is done, work on the page that follows Create New, where users are asked to input dance name; dancers number
 2. Main Page two side menus (buttons not required; but the ability of being activated by hovering & the side button is required as well as the deactivation of these menus)
@@ -102,7 +102,23 @@ To do list:
     3. Button sizes and canvas default size should be stable in MainPage
 3. Formation Canvas development - the construction (Write UML for the model)
 4. Knowing how to load music
-5. 
+
+
+Meeting for 7.19
+Tasks:
+1. Main Page styles changes
+    1. Two buttons 一左一右
+    2. Buttons 不应该占一条 而应该浮在页面上面
+    3. 页面中间的几个Label应该有固定大小 Stage和off Stage方块的区域，很大一块地方+中间会有字体标注，Front和Back可以是一条，不是一块区域
+    4. Drawer打开是黑色的好丑哦
+2. Formation Dots
+    1. 在Stage和Off Stage的区域里有浅灰色的grid可以把dot放在上面
+    2. 有Dot的class 里面存储一些dot的information - position，dancer name，color
+    3. 在Welcome Page点进Create New的时候，应该有popup 需要录入一些基本资料，比如说Dance Name，Dancer Number， Load Music
+3. Main Page 两个Button的功能
+    1. Load Music
+    2. Change Dance Name/Dancer Number
+    3. Change dots information
 
 ## To do list (deprecated)
 - Have a basic app that has nothing but a first page (start a new project; load from cloud; )
