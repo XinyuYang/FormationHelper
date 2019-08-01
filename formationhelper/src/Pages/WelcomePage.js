@@ -57,7 +57,7 @@ export default function WelcomePage() {
                             <Button variant="contained" color="primary" onClick={handleClickOpen}>
                                 Create New
                             </Button>
-                            <Dialog open={dialogOpen} TransitionComponent={Transition} keepMounted onClose={handleClose} 
+                            <Dialog open={dialogOpen} TransitionComponent={Transition} keepMounted onClose={handleClose}
                                     aria-labelledby="alert-dialog-slide-title" aria-describedby="alert-dialog-slide-description" >
                                 <DialogTitle id="alert-dialog-slide-title">{"Create New Formation"}</DialogTitle>
                                 <DialogContent>
