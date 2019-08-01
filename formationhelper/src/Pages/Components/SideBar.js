@@ -18,11 +18,19 @@ const useStyles = makeStyles(theme => ({
   },
   menuButton: {
       marginRight: theme.spacing(2),
+      marginTop: theme.spacing(2)
   },
   sideList: {
     width: 'auto',
   },
-
+  rightList: {
+    marginRight: theme.spacing(2),
+    marginTop: theme.spacing(2),
+    marginLeft: theme.spacing(2),
+    position: 'absolute',
+    right: 0,
+    top: 0
+  }
 }));
 
 export default function TemporaryDrawer() {
@@ -60,20 +68,20 @@ export default function TemporaryDrawer() {
     </div>
   );
 
-
   return (
   <div className={classes.root}>
       <Toolbar>
         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu" onClick={toggleDrawer('left', true)}>
           <MenuIcon />
         </IconButton>
-        <IconButton color="inherit" anchor="right" onClick={toggleDrawer('right', true)}>
-          <MoreIcon />
-        </IconButton>
         <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
           {sideList('left')}
         </Drawer>
-        <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
+
+        <IconButton className={classes.rightList} color="inherent" anchor="right" onClick={toggleDrawer('right', true)}>
+          <MoreIcon />
+        </IconButton>
+        <Drawer className={classes.rightList} anchor="right" open={state.right} onClose={toggleDrawer('right', false)} style={{ flex: 1 }}>
           {sideList('right')}
         </Drawer>
       </Toolbar>
