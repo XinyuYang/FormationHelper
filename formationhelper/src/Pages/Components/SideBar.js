@@ -4,7 +4,6 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -15,6 +14,9 @@ import "../CSS/SideBar.css"
 const useStyles = makeStyles(theme => ({
   root: {
       flexGrow: 1,
+  },
+  list: {
+      maxHeight: 240,
   },
   menuButton: {
       marginRight: theme.spacing(2),
@@ -54,11 +56,11 @@ export default function TemporaryDrawer() {
   const sideList = side => (
     <div
       className={classes.list}
-      role="presentation"
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
+      style={{maxHeight: 360}}
     >
-      <List>
+      <List component="nav" aria-label="main mailbox folders">
         {currentList[side].map((text, index) => (
           <ListItem button key={text}>
             <ListItemText primary={text}/>
@@ -74,14 +76,14 @@ export default function TemporaryDrawer() {
         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu" onClick={toggleDrawer('left', true)}>
           <MenuIcon />
         </IconButton>
-        <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
+        <Drawer type="temporary" classes={{paper: classes.list}} open={state.left} onClose={toggleDrawer('left', false)}>
           {sideList('left')}
         </Drawer>
 
         <IconButton className={classes.rightList} color="inherent" anchor="right" onClick={toggleDrawer('right', true)}>
           <MoreIcon />
         </IconButton>
-        <Drawer className={classes.rightList} anchor="right" open={state.right} onClose={toggleDrawer('right', false)} style={{ flex: 1 }}>
+        <Drawer type="temporary" classes={{paper: classes.list}} className={classes.rightList} anchor="right" open={state.right} onClose={toggleDrawer('right', false)} style={{ flex: 1 }}>
           {sideList('right')}
         </Drawer>
       </Toolbar>
