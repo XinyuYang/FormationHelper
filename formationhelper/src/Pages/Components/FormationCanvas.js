@@ -35,6 +35,7 @@ const useStyles = makeStyles(theme => ({
     },
     Paper: {
         height: 500,
+        paddingTop: 210,
         textAlign: 'center',
          // padding: 20,
          // marginTop:10,
@@ -65,6 +66,7 @@ export default function FormationCanvas(){
 
                         <Grid item md={10}>
                             <Paper className={classes.stage} >
+                                {/*Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
                                 <Grid container direction="column" justify="center" alignItems="center">
                                     <Typography> Stage </Typography>
                                     <Grid item sm>
@@ -75,7 +77,9 @@ export default function FormationCanvas(){
                             </Paper>
                         </Grid>
 
-                        <Grid item md={1}><Paper className={classes.Paper}>OffStage</Paper></Grid>
+                        <Grid item md={1}>
+                            <Paper className={classes.Paper}>OffStage</Paper>
+                        </Grid>
 
                         <Grid item md = {12} marginTop="theme.spacing{4}">
                             <Paper className = {classes. Direction}>
