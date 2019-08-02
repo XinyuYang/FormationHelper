@@ -120,6 +120,11 @@ Tasks:
     2. Change Dance Name/Dancer Number
     3. Change dots information
 
+
+Meeting for 8.2
+Tasks:
+1.数据流动(popup里面的数据可以留存下来到main page)
+
 ## To do list (deprecated)
 - Have a basic app that has nothing but a first page (start a new project; load from cloud; )
 - The app can have different pages to go to during formation change
