@@ -37,7 +37,7 @@ Week 1(Jun 30): Studied for basic React stuff. Worked on the detailed plan.
     1. 可以打开最初始的内容
     2. 进行一些稍微的改动之后commit到自己的branch里面
     3. 里面readme写的内容几乎都过期了所以不需要看也可以
-4. 这些任务希望在下周之前可以完成 越快越好 如果进行的改动越特别越好 
+4. 这些任务希望在下周之前可以完成 越快越好 如果进行的改动越特别越好
 
 7.5 meeting
 Current Idea:
@@ -49,11 +49,11 @@ Stage One - Non Moving Formations
         2. Load Local
         3. Download Online
         4. Credits
-    3. It’s important to recognize that in the future there should be a leading page for the user to input the number of dancers and names/colors of these dancer dots. 
+    3. It’s important to recognize that in the future there should be a leading page for the user to input the number of dancers and names/colors of these dancer dots.
 2. Main Page(See Example)
 ![Example](images/Example.jpg)
     1. Side Menu (left): activate by hovering to the very left or by clicking the top left button, which disappears when the menu is activated, but reappears when the menu is no longer available; this menu is mainly in charge of main actions
-        1. Show/Hide Music(Content changes with the condition of Top popup) 
+        1. Show/Hide Music(Content changes with the condition of Top popup)
         2. Show/Hide Pages(Content changes with the condition of Bottom popup)
         3. Change Dance Name
         4. Change Dancer Number
@@ -126,11 +126,11 @@ Tasks:
 1. 数据流动
     1. popup里面的数据可以留存下来到main page
     2. 这个数据可以被Change Dance Name/Dancer Number的按钮改动
-2. Main Page Style Changes
+2. Main Page Style Changes (cyh)
     1. Two buttons 一左一右且不占一整条空间
     2. 打开的Drawer的长度是一整个屏幕+每个按键的长度再长一点
     3. Stage和OffStage的字在整块区域的最中间
-3. Load Music具体实现
+3. Load Music具体实现 (cyx)
     1. 可以载入真的music
     2. music的显示在屏幕的上面(跟左边按钮中的show/hide music相连接)
     3. music文件的显示是一系列的音波
@@ -150,7 +150,7 @@ Tasks:
 - Able to have teacher view vs. student view (student view make the self dot much bigger and brighter)
 - View mode vs. edit mode
 - double click on a dot can change its position (standing vs sitting vs lying down)
-- have music sequence playing at the top of the space and guide formation change (i.e. sequence during which time are for this formation) 
+- have music sequence playing at the top of the space and guide formation change (i.e. sequence during which time are for this formation)
 - during the changing time, the dots can find their routes to the next formation
 - have access to a website page to watch the video in order to have the formation (this maybe not very necessary)
 - default formation choice
@@ -164,4 +164,3 @@ Side bar buttons
 - a button to guide to music play
 - video play -> websites
 - choose default basic formations
-
