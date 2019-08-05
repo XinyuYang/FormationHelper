@@ -125,7 +125,7 @@ Meeting for 8.2
 Tasks:
 1. 数据流动(yxy)
     1. popup里面的数据可以留存下来到main page
-    2. 这个数据可以被Change Dance Name/Dancer Number的按钮改动
+    2. backend用Spring Boot
 2. Main Page Style Changes (cyh)
     1. Two buttons 一左一右且不占一整条空间
     2. 打开的Drawer的长度是一整个屏幕+每个按键的长度再长一点
@@ -135,7 +135,8 @@ Tasks:
     2. music的显示在屏幕的上面(跟左边按钮中的show/hide music相连接)
     3. music文件的显示是一系列的音波
 4. Dot可以拖动(pyr)
-5. 屏幕下方存在页数的显示(现在可以只是一个显示，不需要跟别的数据相关联)(pyr)
+5. 屏幕下方存在页数的显示(现在可以只是一个显示，不需要跟别的数据相关联)(yxy)
+6. SideBar里面的按钮的功能分开（每个按钮可以导向不同的功能) (pyr)
 
 Meeting for 8.9
 Notes:
@@ -143,6 +144,7 @@ Notes:
 Tasks:
 1. (全部)学习SpringBoot相关知识
 2. 可创建多个页面
+3. 
 
 ## To do list (deprecated)
 - Have a basic app that has nothing but a first page (start a new project; load from cloud; )
