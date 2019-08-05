@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import SideBar from './Components/SideBar';
 import FormationCanvas from './Components/FormationCanvas';
 import {Card, Grid, Paper} from '@material-ui/core';
@@ -20,26 +20,25 @@ const useStyles = makeStyles(theme => ({
      },
 }));
 
+const currentlyAtWelcome = window.location.pathname == "/";
 
-function MainPage() {
-    const classes = useStyles();
-
-    const currentlyAtWelcome = window.location.pathname == "/";
-
-    return (
-        <React.Fragment>
-            <Header headerTitle={"Main"}/>
-            <SideBar/>
-            <Grid className={classes.items} container direction="column"  justify="space-between" alignItems="center">
-                <Grid item>
-                    <FormationCanvas />
+class MainPage extends Component{
+    render(){
+        return (
+            <React.Fragment>
+                <Header headerTitle={"Main"}/>
+                <SideBar/>
+                <Grid className={useStyles.items} container direction="column"  justify="space-between" alignItems="center">
+                    <Grid item>
+                        <FormationCanvas />
+                    </Grid>
+                    <Grid item>
+                        <MediaControl />
+                    </Grid>
                 </Grid>
-                <Grid item>
-                    <MediaControl />
-                </Grid>
-            </Grid>
-        </React.Fragment>
-    );
+            </React.Fragment>
+        );
+    }
 }
 
 export default MainPage;
