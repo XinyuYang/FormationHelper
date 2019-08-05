@@ -10,7 +10,7 @@ import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import Button from "@material-ui/core/Button";
-import AudioSpectrum from 'react-audio-spectrum'
+// import AudioSpectrum from 'react-audio-spectrum'
 
 const useStyles = makeStyles(theme => ({
   card: {
