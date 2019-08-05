@@ -32,10 +32,14 @@ class WelcomePage extends Component {
     constructor(props){
         super(props);
         this.state = {
-            dialogOpen: false
+            dialogOpen: false,
+            danceName: "",
+            dancerNumber: "",
         }
         this.handleClickOpen = this.handleClickOpen.bind(this);
         this.handleClose = this.handleClose.bind(this);
+        this.onDanceNameChange = this.onDanceNameChange.bind(this);
+        this.onDancerNumberChange = this.onDancerNumberChange.bind(this);
     };
     
     handleClickOpen(){
@@ -45,7 +49,15 @@ class WelcomePage extends Component {
     handleClose(){
         this.setState({dialogOpen:false});
     }
-        
+    
+    onDanceNameChange(e){
+        this.setState({danceName: e.target.value});
+    }
+
+    onDancerNumberChange(e){
+        this.setState({dancerNumber: e.target.value});
+    }
+
     render(){
 
         return(
@@ -76,12 +88,16 @@ class WelcomePage extends Component {
                                         <DialogContentText id="alert-dialog-slide-description">
                                             Please write down some basic information before proceeding
                                         </DialogContentText>
-                                        <TextField autoFocus margin="dense" id="name" label="Dance Name" type="dance name" fullWidth/>
-                                        <TextField autoFocus margin="dense" id="number" label="Number of Dancers" type="dancers number" fullWideth />
+                                        <TextField autoFocus margin="dense" id="name" label="Dance Name" type="dance name" 
+                                                value={this.state.danceName} onChange={this.onDanceNameChange} fullWidth/>
+                                        <TextField autoFocus margin="dense" id="number" label="Number of Dancers" type="dancers number" 
+                                                value={this.state.dancerNumber} onChange={this.onDancerNumberChange} fullWideth />
 
                                     </DialogContent>
                                     <DialogActions>
-                                        <Button component={Link} to="/main">
+                                        <Button component={Link} to="/main" 
+                                                params={{danceName:this.state.danceName, 
+                                                        dancerNumber:this.state.dancerNumber}}>
                                             Confirm
                                         </Button>
                                         <Button onClick={this.handleClose}>
