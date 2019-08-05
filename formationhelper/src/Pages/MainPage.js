@@ -23,10 +23,25 @@ const useStyles = makeStyles(theme => ({
 const currentlyAtWelcome = window.location.pathname == "/";
 
 class MainPage extends Component{
+
+    constructor(props){
+        super(props);
+        this.state={
+            danceName: "Main",
+        }
+    }
+
+    componentDidMount (){
+        this.setState({
+            danceName: this.props.location.state.danceName,
+            // danceName: "He",
+        })
+    }
+
     render(){
         return (
             <React.Fragment>
-                <Header headerTitle={"Main"}/>
+                <Header headerTitle={this.state.danceName}/>
                 <SideBar/>
                 <Grid className={useStyles.items} container direction="column"  justify="space-between" alignItems="center">
                     <Grid item>

@@ -95,9 +95,11 @@ class WelcomePage extends Component {
 
                                     </DialogContent>
                                     <DialogActions>
-                                        <Button component={Link} to="/main" 
-                                                params={{danceName:this.state.danceName, 
-                                                        dancerNumber:this.state.dancerNumber}}>
+                                        <Button component={Link} to={{
+                                                                        pathname: "/main",
+                                                                        state: {danceName: this.state.danceName,
+                                                                                dancerNumber: this.state.dancerNumber}
+                                                                    }}>
                                             Confirm
                                         </Button>
                                         <Button onClick={this.handleClose}>
