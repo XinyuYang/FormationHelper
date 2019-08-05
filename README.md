@@ -123,7 +123,7 @@ Tasks:
 
 Meeting for 8.2
 Tasks:
-1. 数据流动
+1. 数据流动(yxy)
     1. popup里面的数据可以留存下来到main page
     2. 这个数据可以被Change Dance Name/Dancer Number的按钮改动
 2. Main Page Style Changes (cyh)
@@ -134,8 +134,8 @@ Tasks:
     1. 可以载入真的music
     2. music的显示在屏幕的上面(跟左边按钮中的show/hide music相连接)
     3. music文件的显示是一系列的音波
-4. Dot可以拖动
-5. 屏幕下方存在页数的显示(现在可以只是一个显示，不需要跟别的数据相关联)
+4. Dot可以拖动(pyr)
+5. 屏幕下方存在页数的显示(现在可以只是一个显示，不需要跟别的数据相关联)(pyr)
 
 ## To do list (deprecated)
 - Have a basic app that has nothing but a first page (start a new project; load from cloud; )
