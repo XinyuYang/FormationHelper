@@ -137,6 +137,13 @@ Tasks:
 4. Dot可以拖动(pyr)
 5. 屏幕下方存在页数的显示(现在可以只是一个显示，不需要跟别的数据相关联)(pyr)
 
+Meeting for 8.9
+Notes:
+1. 引入了backend - SpringBoot; REST API
+Tasks:
+1. (全部)学习SpringBoot相关知识
+2. 可创建多个页面
+
 ## To do list (deprecated)
 - Have a basic app that has nothing but a first page (start a new project; load from cloud; )
 - The app can have different pages to go to during formation change
