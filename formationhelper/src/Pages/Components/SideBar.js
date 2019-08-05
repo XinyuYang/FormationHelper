@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function TemporaryDrawer() {
+export default function SideBar() {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
