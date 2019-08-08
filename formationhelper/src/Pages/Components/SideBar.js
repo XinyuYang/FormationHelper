@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
       flexGrow: 1,
   },
   list: {
-      maxHeight: 240,
+      width: 240,
   },
   menuButton: {
       marginRight: theme.spacing(2),
