@@ -142,34 +142,22 @@ Meeting for 8.9
 Notes:
 1. 引入了backend - SpringBoot; REST API
 Tasks:
-1. (全部)学习SpringBoot相关知识
-2. 可创建多个页面
-3. 
+0. (全部)学习SpringBoot相关知识,可能1~2周内开始进行SpringBoot相关内容
 
-## To do list (deprecated)
-- Have a basic app that has nothing but a first page (start a new project; load from cloud; )
-- The app can have different pages to go to during formation change
-- Draw the basic UI that has no functions (A side bar with buttons and infos for the dancers; there will be on stage and off stage areas, if dots are deleted, they will never be on stage; grids; stage front stage back - able to change)
-- Able to draw plain dots on the pages with numbers and when you go to the next page, the initial position of the dot will be what it was in the previous page
-- Dragging on a dot can change its position
-- Able to delete dots (Offstages dots are not deleted)
-- Able to change the color of dots (that are consistent over the course)
-- Able to name the dots (that are consistent over the course)
-- Able to hide the names of the dots
-- Able to have teacher view vs. student view (student view make the self dot much bigger and brighter)
-- View mode vs. edit mode
-- double click on a dot can change its position (standing vs sitting vs lying down)
-- have music sequence playing at the top of the space and guide formation change (i.e. sequence during which time are for this formation)
-- during the changing time, the dots can find their routes to the next formation
-- have access to a website page to watch the video in order to have the formation (this maybe not very necessary)
-- default formation choice
-- have different stage sizes
-- upload to cloud and share among teammates
-- upload to cloud and share with other ppl (with token)
-- click on dots and change their positions together (or circle)
+1. Main Page两个按钮打开的Drawer长度占满整个屏幕，并在层次上处于Header下方
+2. Main Page按钮的连接
+    1. 点Hide/Show Music可以打开或隐藏页面上方的音乐条
+    2. 点Hide/Show Pages可以打开或隐藏页面下方的页数缩略图条
+    3. 点Change Dance Name，弹出Popover，可改变舞蹈名称（作为标题显示在Header
+    4. 点Change Dancer Number，弹出Popover，可改变舞蹈人数，会直接反应在Dot的数量上
+3. Dancer Number输入后创建相应数量的Dot - 默认现在都是黑色且旁边无备注等等（只是单纯的点
+4. 可以拖动Dot
+5. 自由缩放屏幕大小时，舞台设计不会出现排版问题
+    1. 设定一个最小的限制，达到那个限制前等比例缩放，到达那个限制后出现进度条可以移动，但舞台大小不会在继续缩小（不然如果屏幕设定太小的话，缩放到了最后所有的Box会叠在一起，就看不到任何的Dot了）
+6. Main Page中，Stage和OffStage应该作为背景提示字，也就是说Dot可以移动在这个字的上面，在层次上来说Dot是在这些字更往上的层，互相之间没有干扰
+7. 屏幕下方会有页数的显示，就跟PDF看书一样，会有每一小页的缩略图，目前只有第一页（还不需要缩略图具体反映当前图的内容
+8. Load Music的具体实现，Welcome Page的Popover出现一个新的内容条是Load Music，然后可以把音乐Load到Main Page里面
+9. Load的Music以音波形式表现在屏幕上方
+10. 屏幕上方的Music文件的音波可以标注具体的地方（这页的音乐从哪里开始，从哪里结束
 
-Side bar buttons
-- a button to guide to changes to the dots
-- a button to guide to music play
-- video play -> websites
-- choose default basic formations
+
