@@ -144,21 +144,21 @@ Notes:
 Tasks:
 0. (全部)学习SpringBoot相关知识,可能1~2周内开始进行SpringBoot相关内容
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-1. Main Page两个按钮打开的Drawer长度占满整个屏幕，并在层次上处于Header下方
+1. Main Page两个按钮打开的Drawer长度占满整个屏幕，并在层次上处于Header下方(CYX)
 2. Main Page按钮的连接
-    1. 点Hide/Show Music可以打开或隐藏页面上方的音乐条
-    2. 点Hide/Show Pages可以打开或隐藏页面下方的页数缩略图条
-    3. 点Change Dance Name，弹出Popover，可改变舞蹈名称（作为标题显示在Header
-    4. 点Change Dancer Number，弹出Popover，可改变舞蹈人数，会直接反应在Dot的数量上
-3. Dancer Number输入后创建相应数量的Dot - 默认现在都是黑色且旁边无备注等等（只是单纯的点
+    1. 点Hide/Show Music可以打开或隐藏页面上方的音乐条(CYX)
+    2. 点Hide/Show Pages可以打开或隐藏页面下方的页数缩略图条(PYR)
+    3. 点Change Dance Name，弹出Popover，可改变舞蹈名称（作为标题显示在Header(YXY)
+    4. 点Change Dancer Number，弹出Popover，可改变舞蹈人数，会直接反应在Dot的数量上(YXY)
+3. Dancer Number输入后创建相应数量的Dot - 默认现在都是黑色且旁边无备注等等（只是单纯的点 (CYH)
 4. 可以拖动Dot (PYR)
 5. 自由缩放屏幕大小时，舞台设计不会出现排版问题
-    1. 设定一个最小的限制，达到那个限制前等比例缩放，到达那个限制后出现进度条可以移动，但舞台大小不会在继续缩小（不然如果屏幕设定太小的话，缩放到了最后所有的Box会叠在一起，就看不到任何的Dot了）
+    1. 设定一个最小的限制，达到那个限制前等比例缩放，到达那个限制后出现进度条可以移动，但舞台大小不会在继续缩小（不然如果屏幕设定太小的话，缩放到了最后所有的Box会叠在一起，就看不到任何的Dot了）（CYX
 6. Main Page中，Stage和OffStage应该作为背景提示字，也就是说Dot可以移动在这个字的上面，在层次上来说Dot是在这些字更往上的层，互相之间没有干扰 (CYH)
 7. 屏幕下方会有页数的显示，就跟PDF看书一样，会有每一小页的缩略图，目前只有第一页（还不需要缩略图具体反映当前图的内容 (PYR)
 8. Load Music的具体实现，Welcome Page的Popover出现一个新的内容条是Load Music，然后可以把音乐Load到Main Page里面 (CYX)
 9. Load的Music以音波形式表现在屏幕上方 (CYX)
 10. 屏幕上方的Music文件的音波可以标注具体的地方（这页的音乐从哪里开始，从哪里结束 （CYX
-11. Refractory side bar的写法 - 让所有的问题都可以分开来写function
-
+11. Refractory side bar的写法 - 让所有的问题都可以分开来写function (YXY
+12. 灰色格子背景 作为点的参照坐标系（但是现在不强行要求点在坐标上 （CYH 
 
