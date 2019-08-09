@@ -7,6 +7,7 @@ import '../css/MainPage.css';
 import Header from "./Components/Header";
 import MediaControl from "./Components/Music";
 import Typography from '@material-ui/core/Typography';
+import Player from "./Components/MusicPlayer/Player";
 
 const useStyles = makeStyles(theme => ({
     items: {
@@ -46,9 +47,6 @@ class MainPage extends Component{
                 <Grid className={useStyles.items} container direction="column"  justify="space-between" alignItems="center">
                     <Grid item>
                         <FormationCanvas />
-                    </Grid>
-                    <Grid item>
-                        <MediaControl />
                     </Grid>
                 </Grid>
             </React.Fragment>

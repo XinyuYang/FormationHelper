@@ -9,6 +9,8 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import "../CSS/SideBar.css"
+import Player from "./MusicPlayer/Player";
+import {Divider} from "@material-ui/core";
 
 
 const useStyles = makeStyles(theme => ({
@@ -72,20 +74,26 @@ export default function SideBar() {
 
   return (
   <div className={classes.root}>
-      <Toolbar>
-        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu" onClick={toggleDrawer('left', true)}>
-          <MenuIcon />
-        </IconButton>
-        <Drawer type="temporary" classes={{paper: classes.list}} open={state.left} onClose={toggleDrawer('left', false)}>
-          {sideList('left')}
-        </Drawer>
+      <Toolbar className="toolbar">
+        <div>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu" onClick={toggleDrawer('left', true)}>
+            <MenuIcon />
+          </IconButton>
+          <Drawer type="temporary" classes={{paper: classes.list}} open={state.left} onClose={toggleDrawer('left', false)}>
+            {sideList('left')}
+          </Drawer>
+        </div>
 
-        <IconButton className={classes.rightList} color="inherent" anchor="right" onClick={toggleDrawer('right', true)}>
-          <MoreIcon />
-        </IconButton>
-        <Drawer type="temporary" classes={{paper: classes.list}} className={classes.rightList} anchor="right" open={state.right} onClose={toggleDrawer('right', false)} style={{ flex: 1 }}>
-          {sideList('right')}
-        </Drawer>
+        <Player/>
+
+        <div>
+          <IconButton className={classes.rightList} color="inherent" anchor="right" onClick={toggleDrawer('right', true)}>
+            <MoreIcon />
+          </IconButton>
+          <Drawer type="temporary" classes={{paper: classes.list}} className={classes.rightList} anchor="right" open={state.right} onClose={toggleDrawer('right', false)} style={{ flex: 1 }}>
+            {sideList('right')}
+          </Drawer>
+        </div>
       </Toolbar>
   </div>
   );

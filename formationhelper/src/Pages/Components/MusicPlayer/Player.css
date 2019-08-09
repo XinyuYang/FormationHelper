@@ -1,0 +1,18 @@
+.player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    font-size: 0.8em;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.info{
+}
+.controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.loadMusic{
+}
