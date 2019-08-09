@@ -11,15 +11,19 @@ export default class Controls extends Component{
     state = {
         play: false,
     };
-    audio = new Audio(music);
+    // audio = new Audio(music);
     play = () => {
         this.setState({ play: true});
-        this.audio.play();
+        this.props.audio != null ?
+            this.props.audio.play():
+            alert("Please Upload Music First");
     };
 
     pause = () => {
         this.setState({ play: false});
-        this.audio.pause();
+        this.props.audio != null ?
+            this.props.audio.pause():
+            alert("Please Upload Music First");
     };
     render() {
         return(

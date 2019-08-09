@@ -20,21 +20,9 @@ const useStyles = makeStyles(theme => ({
   list: {
       width: 240,
   },
-  menuButton: {
-      marginRight: theme.spacing(2),
-      marginTop: theme.spacing(2)
-  },
   sideList: {
     width: 'auto',
   },
-  rightList: {
-    marginRight: theme.spacing(2),
-    marginTop: theme.spacing(2),
-    marginLeft: theme.spacing(2),
-    position: 'absolute',
-    right: 0,
-    top: 0
-  }
 }));
 
 export default function SideBar() {
@@ -83,9 +71,9 @@ export default function SideBar() {
             {sideList('left')}
           </Drawer>
         </div>
-
-        <Player/>
-
+        <div>
+          <Player/>
+        </div>
         <div>
           <IconButton className={classes.rightList} color="inherent" anchor="right" onClick={toggleDrawer('right', true)}>
             <MoreIcon />

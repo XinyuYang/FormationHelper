@@ -14,11 +14,12 @@ export default class LoadMusic extends Component{
         return(
             <div className ="Player">
                 <input
-                    accept="music/*"
+                    accept="audio/*"
                     style={{ display: 'none' }}
                     id="contained-button-file"
                     multiple
                     type="file"
+                    onChange={this.props.onChange}
                 />
                 <label htmlFor="contained-button-file">
                     <Button variant="contained" component="span" >
