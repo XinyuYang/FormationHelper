@@ -10,8 +10,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import "../CSS/SideBar.css"
 import Player from "./MusicPlayer/Player";
-import {Divider} from "@material-ui/core";
-
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,6 +29,7 @@ export default function SideBar() {
     left: false,
     right: false,
   });
+  const [showMusic, setShowMusic] = React.useState(false);
   const currentList = {'left':['Show/Hide Music','Show/Hide Pages', 'Change Dance Name', 'Change Dancer Number'], 
                        'right':['Default Formation', 'Copy previous formation', 'Change dots information',
                                 'Settings']};
@@ -43,6 +42,16 @@ export default function SideBar() {
     setState({ ...state, [side]: open });
   };
 
+  const handleOnClick = (event) =>{
+    let side = event.target.getAttribute('side');
+    let index = event.target.getAttribute('index');
+    if(side==='left'){
+      if (index==='0'){
+        setShowMusic(!showMusic);
+      }
+    }
+  };
+
   const sideList = side => (
     <div
       className={classes.list}
@@ -52,13 +61,15 @@ export default function SideBar() {
     >
       <List component="nav" aria-label="main mailbox folders">
         {currentList[side].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text}/>
+          <ListItem button key={text} index={index} side={side} onClick={handleOnClick}>
+            {text}
           </ListItem>
         ))}
       </List>
     </div>
   );
+
+
 
   return (
   <div className={classes.root}>
@@ -72,7 +83,7 @@ export default function SideBar() {
           </Drawer>
         </div>
         <div>
-          <Player/>
+          {showMusic ? <Player/> : null}
         </div>
         <div>
           <IconButton className={classes.rightList} color="inherent" anchor="right" onClick={toggleDrawer('right', true)}>
