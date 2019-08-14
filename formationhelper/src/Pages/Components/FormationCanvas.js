@@ -14,35 +14,6 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(2),
         marginBottom: theme.spacing(2),
     },
-    canvas:{
-        width : 900,
-    },
-
-    direction: {
-
-    },
-    paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    },
-    stage: {
-        height: 500,
-        // width: 700,
-        // padding: 20,
-        // marginTop:10,
-        // marginBottom: 10,
-    },
-    Paper: {
-        height: 500,
-        paddingTop: 210,
-        textAlign: 'center',
-         // padding: 20,
-         // marginTop:10,
-         // marginBottom: 10,
-         // marginLeft: 10,
-         // marginRight: 10,
-     },
   }));
 
 
@@ -53,20 +24,20 @@ export default function FormationCanvas(){
     return (
         <React.Fragment>
             <CssBaseline>
-                <Container  className={classes.canvas} maxWidth='md'>
+                <Container  className="Canvas" >
 
                     <Grid className={classes.items} container spacing={1}>
-                        <Grid item md ={12}>
-                            <Paper>
+                        <Grid item xs ={12}>
+                            <Paper className="Direction">
                                 <Typography  variant ="h5" align="center">Front</Typography>
                             </Paper>
                         </Grid>
 
-                        <Grid item md={1}><Paper  className={classes.Paper} >OffStage</Paper></Grid>
+                        <Grid item xs={1}><Paper  className="Paper" >OffStage</Paper></Grid>
 
-                        <Grid item md={10}>
-                            <Paper className={classes.stage} >
-                                {/*Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
+                        <Grid item xs={10}>
+                            <Paper className="Stage" >
+                                {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
                                 <Grid container direction="column" justify="center" alignItems="center">
                                     <Typography> Stage </Typography>
                                     <Grid item sm>
@@ -77,12 +48,12 @@ export default function FormationCanvas(){
                             </Paper>
                         </Grid>
 
-                        <Grid item md={1}>
-                            <Paper className={classes.Paper}>OffStage</Paper>
+                        <Grid item xs={1}>
+                            <Paper className="Paper">OffStage</Paper>
                         </Grid>
 
-                        <Grid item md = {12} marginTop="theme.spacing{4}">
-                            <Paper className = {classes. Direction}>
+                        <Grid item xs = {12} marginTop="theme.spacing{4}">
+                            <Paper className = "Direction">
                                 <Typography  variant ="h5" align = "center">Back</Typography>
                             </Paper>
                         </Grid>

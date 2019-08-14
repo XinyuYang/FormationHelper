@@ -44,7 +44,7 @@ class MainPage extends Component{
             <React.Fragment>
                 <Header headerTitle={this.state.danceName}/>
                 <SideBar/>
-                <Grid className={useStyles.items} container direction="column"  justify="space-between" alignItems="center">
+                <Grid className={useStyles.items} container direction="column"  >
                     <Grid item>
                         <FormationCanvas />
                     </Grid>

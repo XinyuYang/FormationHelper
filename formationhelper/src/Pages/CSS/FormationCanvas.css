@@ -1,0 +1,13 @@
+.Paper{
+    display: flex;
+    height: 100%;
+    padding-top: 210px;
+    text-align: center;
+}
+.Stage{
+    height: 500px;
+}
+.Canvas{
+    display: flex;
+    width:75%;
+}
