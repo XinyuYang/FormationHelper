@@ -17,6 +17,15 @@ const useStyles = makeStyles(theme => ({
 
 
 class StageSection extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            number: 4,
+        }
+    }
+
+
     render() {
         return (
             <Grid item xs={10}>
@@ -24,11 +33,9 @@ class StageSection extends Component {
                     {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
                     <Grid container direction="column" justify="center" alignItems="center">
                         <Typography> Stage </Typography>
-                        <Draggable onDrag={this.handleDrag}>
-                            <Grid item sm>
-                                <Dot color="#000000"/>
-                            </Grid>
-                        </Draggable>
+                        {Array(this.state.number).fill(1).map(() =>
+                            <Dot color = {"#000000"} />
+                            )}
                     </Grid>
                 </Paper>
             </Grid>
@@ -38,7 +45,7 @@ class StageSection extends Component {
 
 
 
-export default function FormationCanvas(){
+export default function FormationCanvas(formationInfo){
     const classes = useStyles();
 
     return (
@@ -54,9 +61,9 @@ export default function FormationCanvas(){
                         </Grid>
 
                         {/*left section*/}
-                        <Grid item xs={1}><Paper  className="Paper" >HiOffStage</Paper></Grid>
+                        <Grid item xs={1}><Paper  className="Paper" >OffStage</Paper></Grid>
 
-                        <StageSection/>
+                        <StageSection number={formationInfo.dancerNumber}/>
 
                         {/*right section*/}
                         <Grid item xs={1}>
