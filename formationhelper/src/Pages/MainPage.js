@@ -16,6 +16,9 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import TextField from '@material-ui/core/TextField';
 import Button from "@material-ui/core/Button";
+import IconButton from '@material-ui/core/IconButton';
+import Add from '@material-ui/icons/Add';
+import Remove from '@material-ui/icons/Remove';
 
 const useStyles = makeStyles(theme => ({
     items: {
@@ -51,7 +54,8 @@ class MainPage extends Component{
         this.changeInfoPopover = this.changeInfoPopover.bind(this);
         this.closeInfoPopover = this.closeInfoPopover.bind(this);
         this.onDanceNameChange = this.onDanceNameChange.bind(this);
-        this.onDancerNumberChange = this.onDancerNumberChange.bind(this);
+        this.addDancer = this.addDancer.bind(this);
+        this.removeDancer = this.removeDancer.bind(this);
     }
 
     componentDidMount (){
@@ -83,9 +87,15 @@ class MainPage extends Component{
     onDanceNameChange(e){
         this.setState({currDanceName: e.target.value});
     }
-    
-    onDancerNumberChange(e){
-        this.setState({currDancerNumber: e.target.value});
+
+    addDancer(){
+        this.setState({dancerNumber: (this.state.dancerNumber+1)});
+    }
+
+    removeDancer(){
+        if (this.state.dancerNumber > 0){
+            this.setState({dancerNumber: (this.state.dancerNumber - 1)});
+        }
     }
 
     render(){
@@ -102,17 +112,19 @@ class MainPage extends Component{
                         </DialogContentText>
                         <TextField autoFocus margin="dense" id="name" label="Dance Name" type="dance name" value={this.state.currDanceName} 
                                 onChange={this.onDanceNameChange} fullWidth/>
-                        <DialogContentText id="dancer-number-dialog">
-                            Dancer Number:
-                        </DialogContentText>
-                        <TextField autoFocus margin="dense" id="number" label="Dancer Number" type="dancer number" value={this.state.currDancerNumber}
-                                   onChange={this.onDancerNumberChange} fullWidth/>
-                        </DialogContent>
-
+                        <div>
+                            <DialogContentText>
+                                Dancer Number:
+                            </DialogContentText>
+                            <IconButton><Add onClick={this.addDancer}/></IconButton>
+                                {this.state.dancerNumber}
+                            <IconButton><Remove onClick={this.removeDancer}/></IconButton>
+                        </div>
                         <DialogActions>
                             <Button onClick={this.changeInfoPopover}>Confirm</Button>
                             <Button onClick={this.closeInfoPopover}>Cancel</Button>
                         </DialogActions>
+                    </DialogContent>
                 </Dialog>
                 <Grid className={useStyles.items} container direction="column"  >
                     <Grid item>
