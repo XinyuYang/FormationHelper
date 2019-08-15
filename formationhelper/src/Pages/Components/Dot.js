@@ -7,7 +7,9 @@ class Dot extends Component{
     render(input){
         var color = input? input.color: "#000000"; //currently not working
         return(
-            <Circle r={10} fill={{color:color}} stroke={{color:color}} strokeWidth={0}/>
+            <Draggable bounds="parent">
+                <div><Circle r={10} fill={{color:color}} stroke={{color:color}} strokeWidth={0}/></div>
+            </Draggable>
         )
     }
 }

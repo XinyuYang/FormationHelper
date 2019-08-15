@@ -23,9 +23,9 @@ class StageSection extends Component {
                 <div className="Stage" style={{direction:"column", justify:"center", alignItems: "center", position: 'relative'}}>
                     {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
                     {/* Dot only works using div */}
-                    <Draggable bounds="parent" >
-                        <div><Dot/></div>
-                    </Draggable>
+                    {Array(this.props.dancer).fill(1).map(() =>
+                        <Dot color = {"#000000"} />
+                    )}
                 </div>
 
                 <div style={{margin:'auto', textAlign: 'center'}}>
@@ -43,7 +43,7 @@ class StageSection extends Component {
 }
 
 
-export default function FormationCanvas(){
+export default function FormationCanvas(formationInfo){
 
     return (
         <div className="root">
@@ -57,7 +57,7 @@ export default function FormationCanvas(){
                 </div>
 
                 <div className="Stage">
-                     <StageSection/>
+                     <StageSection dancer={formationInfo.dancerNumber}/>
                 </div>
 
                 <div className="RightStage">
