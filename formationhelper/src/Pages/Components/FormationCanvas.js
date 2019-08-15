@@ -10,16 +10,14 @@ class StageSection extends Component {
     render() {
         return (
             <Grid item xs={10}>
-                <div className="Stage" >
-                    {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
-                    <Grid container direction="column" justify="center" alignItems="center">
+                <div className="Stage" style={{direction:"column", justify:"center", alignItems: "center", position: 'relative'}}>
+                    {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/
+                    /* The Dot is draggable only with <div> ...*/}
+
                         <Typography> Stage </Typography>
-                        <Draggable onDrag={this.handleDrag}>
-                            <Grid item sm>
-                                <Dot color="#000000"/>
-                            </Grid>
+                        <Draggable bounds="parent" >
+                            <div><Dot/></div>
                         </Draggable>
-                    </Grid>
                 </div>
             </Grid>
         )
