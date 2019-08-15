@@ -10,7 +10,7 @@ class StageSection extends Component {
     render() {
         return (
             <Grid item xs={10}>
-                <Paper className="Stage" >
+                <div className="Stage" >
                     {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
                     <Grid container direction="column" justify="center" alignItems="center">
                         <Typography> Stage </Typography>
@@ -20,7 +20,7 @@ class StageSection extends Component {
                             </Grid>
                         </Draggable>
                     </Grid>
-                </Paper>
+                </div>
             </Grid>
         )
     }
