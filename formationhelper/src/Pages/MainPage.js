@@ -69,8 +69,11 @@ class MainPage extends Component{
     }
 
     changeInfoPopover(){
-        this.setState({danceName: this.state.currDanceName});
-        this.setState({dancerNumber: this.state.currDancerNumber});
+        this.setState({
+            danceName: this.state.currDanceName,
+            dancerNumber: this.state.currDancerNumber,
+            showInfo:false,
+        });
     }
     
     closeInfoPopover(){
