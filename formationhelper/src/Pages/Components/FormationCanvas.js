@@ -5,16 +5,6 @@ import Dot from "./Dot";
 import Typography from '@material-ui/core/Typography';
 import Draggable from 'react-draggable'
 
-const useStyles = makeStyles(theme => ({
-    root: {
-      padding: theme.spacing(3, 2),
-    },
-    items: {
-        marginTop: theme.spacing(2),
-        marginBottom: theme.spacing(2),
-    },
-  }));
-
 
 class StageSection extends Component {
 
@@ -29,7 +19,7 @@ class StageSection extends Component {
     render() {
         return (
             <Grid item xs={10}>
-                <Paper className="Stage" >
+                <div className="Stage" >
                     {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
                     <Grid container direction="column" justify="center" alignItems="center">
                         <Typography> Stage </Typography>
@@ -37,7 +27,7 @@ class StageSection extends Component {
                             <Dot color = {"#000000"} />
                             )}
                     </Grid>
-                </Paper>
+                </div>
             </Grid>
         )
     }
@@ -49,36 +39,28 @@ export default function FormationCanvas(formationInfo){
     const classes = useStyles();
 
     return (
-        <React.Fragment>
-            <CssBaseline>
-                <Container  className="Canvas" >
-                    <Grid className={classes.items} container spacing={1}>
-                        {/*top section*/}
-                        <Grid item xs ={12}>
-                            <Paper className="Direction">
-                                <Typography  variant ="h5" align="center">Front</Typography>
-                            </Paper>
-                        </Grid>
+        <div className="root">
+            <Paper className="Canvas" >
+                <div className="Front" >
+                    <Typography>Front</Typography>
+                </div>
 
-                        {/*left section*/}
-                        <Grid item xs={1}><Paper  className="Paper" >OffStage</Paper></Grid>
+                <div className="LeftStage">
+                    <Typography>Off Stage</Typography>
+                </div>
 
-                        <StageSection number={formationInfo.dancerNumber}/>
+                <div className="Stage">
+                    <StageSection number={formationInfo.dancerNumber}/>
+                </div>
 
-                        {/*right section*/}
-                        <Grid item xs={1}>
-                            <Paper className="Paper">OffStage</Paper>
-                        </Grid>
+                <div className="RightStage">
+                    <Typography>Off Stage</Typography>
+                </div>
 
-                        {/*bottom section*/}
-                        <Grid item xs = {12} marginTop="theme.spacing{4}">
-                            <Paper className = "Direction">
-                                <Typography  variant ="h5" align = "center">Back</Typography>
-                            </Paper>
-                        </Grid>
-                    </Grid>
-                </Container>
-            </CssBaseline>
-        </React.Fragment>
-    );
+                <div className = "Back" >
+                    <Typography>Back</Typography>
+                </div>
+            </Paper>
+        </div>
+    )
 }
