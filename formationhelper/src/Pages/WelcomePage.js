@@ -24,9 +24,6 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-// const [dialogOpen, setDialogOpen] = useState(false);
-
-
 class WelcomePage extends Component {
 
     constructor(props){
