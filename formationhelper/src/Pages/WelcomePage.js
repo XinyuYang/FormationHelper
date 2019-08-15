@@ -13,6 +13,9 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import TextField from '@material-ui/core/TextField';
+import IconButton from '@material-ui/core/IconButton';
+import Add from '@material-ui/icons/Add';
+import Remove from '@material-ui/icons/Remove';
 
 const Transition = React.forwardRef(function Transition(props, ref){
     return <Slide direction="up" ref={ref} {...props}/>;
@@ -31,12 +34,13 @@ class WelcomePage extends Component {
         this.state = {
             dialogOpen: false,
             danceName: "",
-            dancerNumber: "",
+            dancerNumber: 0,
         }
         this.handleClickOpen = this.handleClickOpen.bind(this);
         this.handleClose = this.handleClose.bind(this);
         this.onDanceNameChange = this.onDanceNameChange.bind(this);
-        this.onDancerNumberChange = this.onDancerNumberChange.bind(this);
+        this.addDancer = this.addDancer.bind(this);
+        this.removeDancer = this.removeDancer.bind(this);
     };
     
     handleClickOpen(){
@@ -51,8 +55,14 @@ class WelcomePage extends Component {
         this.setState({danceName: e.target.value});
     }
 
-    onDancerNumberChange(e){
-        this.setState({dancerNumber: e.target.value});
+    addDancer(){
+        this.setState({dancerNumber: (this.state.dancerNumber+1)});
+    }
+
+    removeDancer(){
+        if (this.state.dancerNumber > 0){
+            this.setState({dancerNumber: (this.state.dancerNumber - 1)});
+        }
     }
 
     render(){
@@ -87,8 +97,14 @@ class WelcomePage extends Component {
                                         </DialogContentText>
                                         <TextField autoFocus margin="dense" id="name" label="Dance Name" type="dance name" 
                                                 value={this.state.danceName} onChange={this.onDanceNameChange} fullWidth/>
-                                        <TextField autoFocus margin="dense" id="number" label="Number of Dancers" type="dancers number" 
-                                                value={this.state.dancerNumber} onChange={this.onDancerNumberChange} fullWideth />
+                                        <div>
+                                            <DialogContentText>
+                                                Dancer Number:
+                                            </DialogContentText>
+                                            <IconButton><Add onClick={this.addDancer}/></IconButton>
+                                                {this.state.dancerNumber}
+                                            <IconButton><Remove onClick={this.removeDancer}/></IconButton>
+                                        </div>
 
                                     </DialogContent>
                                     <DialogActions>

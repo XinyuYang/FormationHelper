@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBack from '@material-ui/icons/ArrowBack';
+import Settings from '@material-ui/icons/Settings';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -35,10 +36,12 @@ export default (headerInfo) => {
                             <ArrowBack/>
                         </IconButton>
                     )}
-                    
                     <Typography variant="h6" className={classes.title}>
                         {headerInfo.headerTitle}
                     </Typography>
+                    <IconButton edge="start" color="inherit">
+                        <Settings onClick={headerInfo.infoFunction}/>
+                    </IconButton>
 
                     <Button color="inherit">Login</Button>
                 </Toolbar>
