@@ -4,9 +4,19 @@ import { CssBaseline, Container, Paper, Grid } from '@material-ui/core';
 import Dot from "./Dot";
 import Typography from '@material-ui/core/Typography';
 import Draggable from 'react-draggable'
+import Pagination from "material-ui-flat-pagination"
 
 
 class StageSection extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { offset: 0 }
+    }
+
+    handleClick(offset) {
+        this.setState({offset})
+    }
+
     render() {
         return (
             <Grid item xs={10}>
@@ -16,6 +26,16 @@ class StageSection extends Component {
                     <Draggable bounds="parent" >
                         <div><Dot/></div>
                     </Draggable>
+                </div>
+
+                <div style={{margin:'auto', textAlign: 'center'}}>
+                    <h3>This is a placeholder of { this.state.offset + 1 }</h3>
+                    <Pagination
+                        limit={1}
+                        offset={this.state.offset}
+                        total={10}
+                        onClick={(e, offset) => this.handleClick(offset)}
+                    />
                 </div>
             </Grid>
         )
