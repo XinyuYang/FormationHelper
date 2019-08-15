@@ -36,7 +36,6 @@ class StageSection extends Component {
 
 
 export default function FormationCanvas(formationInfo){
-    const classes = useStyles();
 
     return (
         <div className="root">
