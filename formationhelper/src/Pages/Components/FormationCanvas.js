@@ -6,35 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import Draggable from 'react-draggable'
 
 
-class StageSection extends Component {
-
-    constructor(props){
-        super(props);
-        this.state = {
-            number: 4,
-        }
-    }
-
-
-    render() {
-        return (
-            <Grid item xs={10}>
-                <div className="Stage" >
-                    {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
-                    <Grid container direction="column" justify="center" alignItems="center">
-                        <Typography> Stage </Typography>
-                        {Array(this.state.number).fill(1).map(() =>
-                            <Dot color = {"#000000"} />
-                            )}
-                    </Grid>
-                </div>
-            </Grid>
-        )
-    }
-}
-
-
-
 export default function FormationCanvas(formationInfo){
 
     return (
@@ -49,7 +20,17 @@ export default function FormationCanvas(formationInfo){
                 </div>
 
                 <div className="Stage">
-                    <StageSection number={formationInfo.dancerNumber}/>
+                    <Grid item xs={10}>
+                    <div className="Stage" >
+                        {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
+                        <Grid container direction="column" justify="center" alignItems="center">
+                            <Typography> Stage </Typography>
+                            {Array(formationInfo.dancerNumber).fill(1).map(() =>
+                                <Dot color = {"#000000"} />
+                            )}
+                        </Grid>
+                    </div>
+                </Grid>
                 </div>
 
                 <div className="RightStage">
