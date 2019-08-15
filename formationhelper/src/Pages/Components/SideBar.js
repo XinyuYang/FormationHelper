@@ -10,6 +10,15 @@ import MenuIcon from '@material-ui/icons/Menu';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import "../CSS/SideBar.css"
 import Player from "./MusicPlayer/Player";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Slide from '@material-ui/core/Slide';
+import TextField from '@material-ui/core/TextField';
+import Button from "@material-ui/core/Button";
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,14 +32,19 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SideBar() {
+const Transition = React.forwardRef(function Transition(props, ref){
+  return <Slide direction="up" ref={ref} {...props}/>;
+});
+
+export default function SideBar(danceInfo) {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
     right: false,
   });
   const [showMusic, setShowMusic] = React.useState(false);
-  const currentList = {'left':['Show/Hide Music','Show/Hide Pages', 'Change Dance Name', 'Change Dancer Number'], 
+  const [showInfo, setShowInfo] = React.useState(false);
+  const currentList = {'left':['Show/Hide Music','Show/Hide Pages', 'Change Basic Dance Info'], 
                        'right':['Default Formation', 'Copy previous formation', 'Change dots information',
                                 'Settings']};
 
@@ -48,6 +62,8 @@ export default function SideBar() {
     if(side==='left'){
       if (index==='0'){
         setShowMusic(!showMusic);
+      }else if (index === '2'){
+        setShowInfo(!showInfo);
       }
     }
   };
@@ -69,6 +85,13 @@ export default function SideBar() {
     </div>
   );
 
+  function handleInfoClose(){
+    setShowInfo(false);
+  }
+
+  function changeInfo(){
+    setShowInfo(false);
+  }
 
 
   return (
@@ -85,6 +108,25 @@ export default function SideBar() {
         <div>
           {showMusic ? <Player/> : null}
         </div>
+        <Dialog open={showInfo} TransitionComponent={Transition} keepMounted onClose={handleInfoClose}
+                aria-labelledby="alert-dialog-slide-title" aria-describedby="alert-dialog-slide-description" >
+          <DialogTitle id="alert-dialog-slide-title">{"Change Basic Dance Info"}</DialogTitle>
+          <DialogContent>
+            <DialogContentText id="dance-name-dialog">
+              Dance Name:
+            </DialogContentText>
+            <TextField autoFocus margin="dense" id="name" label="Dance Name" type="dance name" value={danceInfo.danceName} fullWidth/>
+            <DialogContentText id="dancer-number-dialog">
+              Dancer Number:
+            </DialogContentText>
+            <TextField autoFocus margin="dense" id="number" label="Dancer Number" type="dancer number" value={danceInfo.dancerNumber} fullWidth/>
+          </DialogContent>
+
+          <DialogActions>
+            <Button onClick={changeInfo}>Confirm</Button>
+            <Button onClick={handleInfoClose}>Cancel</Button>
+          </DialogActions>
+        </Dialog>
         <div>
           <IconButton className={classes.rightList} color="inherent" anchor="right" onClick={toggleDrawer('right', true)}>
             <MoreIcon />

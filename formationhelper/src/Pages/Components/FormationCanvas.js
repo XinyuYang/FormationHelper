@@ -1,10 +1,30 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { CssBaseline, Container, Paper, Grid } from '@material-ui/core';
 import Dot from "./Dot";
 import Typography from '@material-ui/core/Typography';
+import Draggable from 'react-draggable'
 
 
+class StageSection extends Component {
+    render() {
+        return (
+            <Grid item xs={10}>
+                <Paper className="Stage" >
+                    {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
+                    <Grid container direction="column" justify="center" alignItems="center">
+                        <Typography> Stage </Typography>
+                        <Draggable onDrag={this.handleDrag}>
+                            <Grid item sm>
+                                <Dot color="#000000"/>
+                            </Grid>
+                        </Draggable>
+                    </Grid>
+                </Paper>
+            </Grid>
+        )
+    }
+}
 
 
 export default function FormationCanvas(){
@@ -21,13 +41,7 @@ export default function FormationCanvas(){
                 </div>
 
                 <div className="Stage">
-                    <div >
-                        <Typography variant={"h4"}> Stage </Typography>
-                        <div >
-                            <Dot color="#f7941f"/>
-                            <Dot color="#f44336"/>
-                        </div>
-                    </div>
+                     <StageSection/>
                 </div>
 
                 <div className="RightStage">

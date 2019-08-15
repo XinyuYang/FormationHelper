@@ -27,7 +27,7 @@ class MainPage extends Component{
 
     constructor(props){
         super(props);
-        this.state={
+        this.state = {
             danceName: "Main",
         }
     }
@@ -35,7 +35,6 @@ class MainPage extends Component{
     componentDidMount (){
         this.setState({
             danceName: this.props.location.state.danceName,
-            // danceName: "He",
         })
     }
 
@@ -43,10 +42,10 @@ class MainPage extends Component{
         return (
             <React.Fragment>
                 <Header headerTitle={this.state.danceName}/>
-                <SideBar/>
+                <SideBar danceName={this.state.danceName} dancerNumber={this.state.dancerNumber}/>
                 <Grid className={useStyles.items} container direction="column"  >
                     <Grid item>
-                        <FormationCanvas />
+                        <FormationCanvas dancerNumber={this.state.dancerNumber}/>
                     </Grid>
                 </Grid>
             </React.Fragment>
