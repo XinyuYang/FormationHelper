@@ -11,13 +11,11 @@ class StageSection extends Component {
         return (
             <Grid item xs={10}>
                 <div className="Stage" style={{direction:"column", justify:"center", alignItems: "center", position: 'relative'}}>
-                    {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/
-                    /* The Dot is draggable only with <div> ...*/}
-
-                        <Typography> Stage </Typography>
-                        <Draggable bounds="parent" >
-                            <div><Dot/></div>
-                        </Draggable>
+                    {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
+                    {/* Dot only works using div */}
+                    <Draggable bounds="parent" >
+                        <div><Dot/></div>
+                    </Draggable>
                 </div>
             </Grid>
         )
