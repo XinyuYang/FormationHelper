@@ -6,6 +6,11 @@ import Typography from '@material-ui/core/Typography';
 import Draggable from 'react-draggable'
 import Pagination from "material-ui-flat-pagination"
 
+function createArr(num){
+    let arr = [];
+    for(let i = 0; i < num; i++) arr.push(i);
+    return arr
+}
 
 class StageSection extends Component {
     constructor(props) {
@@ -23,8 +28,9 @@ class StageSection extends Component {
                 <div className="Stage" style={{direction:"column", justify:"center", alignItems: "center", position: 'relative'}}>
                     {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
                     {/* Dot only works using div */}
-                    {Array(this.props.dancer).fill(1).map(() =>
-                        <Dot color = {"#000000"} />
+
+                    {createArr(this.props.dancer).map((index) =>
+                        <Dot name = {'dot'+index} color = "#000000" />
                     )}
                 </div>
 
