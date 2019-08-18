@@ -1,16 +1,12 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
+import React, {useState, useEffect} from 'react';
+import { makeStyles, Dialog, DialogTitle,
+    DialogActions, DialogContent, DialogContentText,
+    Toolbar, IconButton, List, ListItem, Drawer, Typography} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import "../CSS/SideBar.css"
 import Player from "./MusicPlayer/Player";
-import { Typography } from '@material-ui/core';
+import DotInfo from "./Dot/DotInfo";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -26,11 +22,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function SideBar() {
   const classes = useStyles();
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     left: false,
     right: false,
   });
-  const [showMusic, setShowMusic] = React.useState(false);
+  const [showMusic, setShowMusic] = useState(false);
+  const [showDot, setShowDot] = useState(false);
   const currentList = {'left':['Show/Hide Music','Show/Hide Pages'],
                        'right':['Default Formation', 'Copy previous formation', 'Change dots information',
                                 'Settings']};
@@ -46,9 +43,16 @@ export default function SideBar() {
   const handleOnClick = (event) =>{
     let side = event.target.getAttribute('side');
     let index = event.target.getAttribute('index');
+    // handleclick music
     if(side==='left'){
       if (index==='0'){
         setShowMusic(!showMusic);
+      }
+    }
+    // handleclick dot information
+    if(side==='right'){
+      if(index==='2'){
+        setShowDot(!showDot);
       }
     }
   };
@@ -93,6 +97,8 @@ export default function SideBar() {
             {sideList('right')}
           </Drawer>
         </div>
+
+        <DotInfo isDotInfoOpen={showDot}/>
       </Toolbar>
   </div>
   );

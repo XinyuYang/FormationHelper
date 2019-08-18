@@ -4,6 +4,15 @@ import Draggable from 'react-draggable';
 import {Grid} from '@material-ui/core';
 
 class Dot extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            dotNumber: 0,
+            dotColor: null,
+            dotName: null
+        }
+    }
+
     render(input){
         var color = input? input.color: "#000000"; //currently not working
         return(
