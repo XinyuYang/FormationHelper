@@ -162,3 +162,23 @@ Tasks:
 11. Refractory side bar的写法 - 让所有的问题都可以分开来写function (YXY
 12. 灰色格子背景 作为点的参照坐标系（但是现在不强行要求点在坐标上 （CYH 
 
+Meeting for 8.16
+Tasks
+1. 音乐部分(CYX)
+    1. 音乐部分有光标显示现在播放到哪里（现在还不需要可以拖动它
+    2. 音乐部分可以点击音波增加分割线，（相当于Pr里面的Marker的功能
+    3. 音乐部分仅显示Import的音乐的名称 不需要演唱者姓名，但是需要在Upload之后改成那个名称
+2. 分页部分(YXY)
+    1. 点Hide/Show Pages可以打开或者隐藏页面下方的页数缩略图条
+    2. 屏幕下方会有页数的显示，就跟PDF看书一样，会有每一小页的缩略图(!)，目前只有第一页（还不需要缩略图具体反映当前图的内容
+    3. 页数缩略图条可以增加页数
+3. Canvas部分(CYH)
+    1. Dot不应该跑到Canvas以外的地方（现在还是可以跑出去，打开音乐的话
+    2. 背景应该有灰色格子 但是灰色格子不会影响Dot的位置 只是作为参考
+    3. Dot之间不可以Overlap
+    4. Dot现在到不了offstage的地方
+4. Dot部分(PYR)
+    1. 点击右侧按钮的Change Dots Information 右侧的工具栏会变成Dots的Information List
+    2. Dots的信息包括 号码 颜色 名字 （位置信息存储在Dot class里 不用展示出来
+    3. Dots旁边会有一个小号码 在InformationList的最下方可以有一个可以勾选的展示号码的选项
+    4. 改变舞蹈人数之后不能马上反映在Dot的数量上
