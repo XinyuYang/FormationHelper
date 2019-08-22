@@ -1,4 +1,4 @@
-package com.formation.data;
+package formation.helper.data;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
