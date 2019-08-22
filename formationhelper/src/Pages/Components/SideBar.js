@@ -28,6 +28,7 @@ export default function SideBar() {
   });
   const [showMusic, setShowMusic] = useState(false);
   const [showDot, setShowDot] = useState(false);
+  const [showPagniation, setShowPagination] = useState(false);
   const currentList = {'left':['Show/Hide Music','Show/Hide Pages'],
                        'right':['Default Formation', 'Copy previous formation', 'Change dots information',
                                 'Settings']};
@@ -47,6 +48,8 @@ export default function SideBar() {
     if(side==='left'){
       if (index==='0'){
         setShowMusic(!showMusic);
+      }else if (index === '1'){
+        setShowPagination(!showPagniation);
       }
     }
     // handleclick dot information
