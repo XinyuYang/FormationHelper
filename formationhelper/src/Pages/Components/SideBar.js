@@ -6,7 +6,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import "../CSS/SideBar.css"
 import Player from "./MusicPlayer/Player";
-import DotInfo from "./Dot/DotInfo";
+// import DotInfo from "./Dot/DotInfo";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -98,7 +98,7 @@ export default function SideBar() {
           </Drawer>
         </div>
 
-        <DotInfo isDotInfoOpen={showDot}/>
+        {/* <DotInfo isDotInfoOpen={showDot}/> */}
       </Toolbar>
   </div>
   );

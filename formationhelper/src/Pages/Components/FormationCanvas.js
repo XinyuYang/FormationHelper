@@ -4,7 +4,6 @@ import { CssBaseline, Container, Paper, Grid } from '@material-ui/core';
 import Dot from "./Dot";
 import Typography from '@material-ui/core/Typography';
 import Draggable from 'react-draggable'
-import Pagination from "material-ui-flat-pagination"
 
 function createArr(num){
     let arr = [];
@@ -32,16 +31,6 @@ class StageSection extends Component {
                     {createArr(this.props.dancer).map((index) =>
                         <Dot name = {'dot'+index} color = "#000000" />
                     )}
-                </div>
-
-                <div style={{margin:'auto', textAlign: 'center'}}>
-                    <h3>This is a placeholder of { this.state.offset + 1 }</h3>
-                    <Pagination
-                        limit={1}
-                        offset={this.state.offset}
-                        total={10}
-                        onClick={(e, offset) => this.handleClick(offset)}
-                    />
                 </div>
             </Grid>
         )
