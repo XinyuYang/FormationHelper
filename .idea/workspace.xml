@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac9c1d7-bf4c-4843-becb-be60daa3b250" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Wave.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/formationhelper/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/formationhelper/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/formationhelper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/formationhelper/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/formationhelper/src/Pages/CSS/FormationCanvas.css" beforeDir="false" afterPath="$PROJECT_DIR$/formationhelper/src/Pages/CSS/FormationCanvas.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Controls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Info.js" beforeDir="false" afterPath="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Player.css" beforeDir="false" afterPath="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Player.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Progress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/formationhelper/src/Pages/Components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/formationhelper/src/Pages/Components/SideBar.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,35 +23,113 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/FormationCanvas.js">
+        <entry file="file://$PROJECT_DIR$/formationhelper/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-338">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="338">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/formationhelper/package.json">
+        <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/SideBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="260">
+              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Info.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/LoadMusic.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-390">
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Player.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-481">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Wave.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="4" selection-start-line="4" selection-end-line="16" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/CSS/FormationCanvas.css">
+        <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Player.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="376">
+              <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Controls.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,24 +139,23 @@
       <list>
         <option value="$PROJECT_DIR$/formationhelper/src/Pages/Components/FormationCanvas.js" />
         <option value="$PROJECT_DIR$/formationhelper/src/Pages/CSS/FormationCanvas.css" />
+        <option value="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Controls.js" />
+        <option value="$PROJECT_DIR$/formationhelper/src/Pages/Components/SideBar.js" />
+        <option value="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Info.js" />
+        <option value="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Progress.js" />
+        <option value="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/peaks.js" />
+        <option value="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Player.js" />
+        <option value="$PROJECT_DIR$/formationhelper/package.json" />
+        <option value="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Wave.js" />
+        <option value="$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Player.css" />
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/FormationHelper.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="360" />
-    <option name="width" value="1568" />
-    <option name="height" value="1058" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1205" />
+    <option name="y" value="95" />
+    <option name="width" value="910" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -80,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,22 +202,35 @@
               <item name="formationhelper" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="MusicPlayer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FormationHelper" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FormationHelper" type="462c0819:PsiDirectoryNode" />
+              <item name="formationhelper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
               <item name="CSS" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -165,31 +260,33 @@
       <updated>1565871604163</updated>
       <workItem from="1565871608494" duration="8317000" />
       <workItem from="1565900790832" duration="1209000" />
-      <workItem from="1565902691189" duration="579000" />
+      <workItem from="1565902691189" duration="6069000" />
+      <workItem from="1566508259293" duration="5359000" />
+      <workItem from="1566513831516" duration="6981000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10105000" />
+    <option name="totallyTimeSpent" value="27935000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="315" y="0" width="1368" height="923" extended-state="0" />
+    <frame x="-8" y="-8" width="1691" height="929" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26541352" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12099214" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32769832" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32899868" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.4118421" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2249675" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -200,31 +297,131 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/formationhelper/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67314">
-          <caret line="2589" column="17" selection-start-line="2589" selection-start-column="17" selection-end-line="2589" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/formationhelper/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/FormationCanvas.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-338">
+        <state relative-caret-position="130">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/CSS/FormationCanvas.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        <state relative-caret-position="858">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Controls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/peaks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17356">
+          <caret line="945" selection-start-line="945" selection-end-line="945" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/LoadMusic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390">
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Progress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/SideBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-481">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19692">
+          <caret line="2589" column="17" selection-start-line="2589" selection-start-column="17" selection-end-line="2589" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Wave.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="4" selection-start-line="4" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formationhelper/src/Pages/Components/MusicPlayer/Player.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
         </state>
       </provider>
     </entry>

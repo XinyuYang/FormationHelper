@@ -10,9 +10,11 @@ import Pause from "@material-ui/icons/esm/Pause";
 export default class Controls extends Component{
     state = {
         play: false,
+        timePlayedSoFar: 0,
     };
     // audio = new Audio(music);
     play = () => {
+
         this.setState({ play: true});
         this.props.audio != null ?
             this.props.audio.play():

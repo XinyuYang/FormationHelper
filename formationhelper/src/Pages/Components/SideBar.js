@@ -26,7 +26,7 @@ export default function SideBar() {
     left: false,
     right: false,
   });
-  const [showMusic, setShowMusic] = useState(false);
+  const [showMusic, setShowMusic] = useState(true);
   const [showDot, setShowDot] = useState(false);
   const [showPagniation, setShowPagination] = useState(false);
   const currentList = {'left':['Show/Hide Music','Show/Hide Pages'],

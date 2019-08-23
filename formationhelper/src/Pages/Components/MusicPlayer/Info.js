@@ -4,17 +4,19 @@ import CardContent from "@material-ui/core/CardContent";
 
 export default class Info extends Component{
     state = {
-      musicName: this.props.musicName,
-      artist: this.props.artist,
+      musicName: null,
     };
+    componentDidUpdate(prevProps) {
+        if(this.props.musicName !== prevProps.musicName){
+            this.setState({musicName: this.props.musicName})
+        }
+    }
+
     render() {
         return(
             <div>
-                <Typography component="h5" variant="h5">
+                <Typography variant="subtitle1">
                     {this.state.musicName}
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                    {this.state.artist}
                 </Typography>
             </div>
         );

@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
 import Info from "./Info";
-import Progress from "./Progress";
 import Controls from "./Controls";
 import LoadMusic from "./LoadMusic";
 import { getAudioBuffer, getContext } from './Utils';
 import {Box, Paper} from '@material-ui/core';
+import Wave from "./Wave";
 
 export default class Player extends Component{
     state = {
         audio: null,
         buffer: null,
         context: null,
-        musicName: "AAA",
-        artist: "Leo Li",
         MusicLength: 0,
+        duration: 0,
     };
+
 
     componentWillMount() {
         const context = getContext();
@@ -23,17 +23,31 @@ export default class Player extends Component{
         });
     }
 
-    handleFile = event =>{
+    handleFile = async event =>{
         const files = event.target.files;
-        const file = window.URL.createObjectURL(files[0]);
-        this.getFile(file);
+        const file = await window.URL.createObjectURL(files[0]);
+        // this.getFile(file);
         const audio = new Audio(file);
-        this.setState({audio});
+        // this.setState({audio});
+        // console.log(audio);
+        const musicName = files[0]['name'];
+        await this.setState({audio,musicName});
+        // console.log(files[0]['name']);
+
     };
 
     getFile = async (path = 'audio/test.mp3') => {
         const buffer = await getAudioBuffer(path, this.state.context);
         this.setState({ buffer });
+        const duration = buffer['duration'];
+        this.setState({duration});
+        console.log(buffer);
+    };
+
+
+    onMusicProgress = ()=>{
+        // Implement this
+
     };
 
     render() {
@@ -44,10 +58,10 @@ export default class Player extends Component{
                     artist={this.state.artist}
                 />
                 <div className = "progress">
-                    <Progress buffer={this.state.buffer} />
+                    <Wave className = "wave" audio={this.state.audio} />
                 </div>
                 <div className = "controls">
-                    <Controls  audio={this.state.audio}/>
+                    <Controls  audio={this.state.audio} onMusicProgress={this.onMusicProgress}/>
                     {/*<Time />*/}
                     <LoadMusic className = "loadMusic" onChange={this.handleFile}/>
                 </div>

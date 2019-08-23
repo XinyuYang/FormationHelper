@@ -15,8 +15,9 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-shapes": "^0.1.0",
+    "react-wavesurfer": "^0.8.6",
     "typeface-roboto": "0.0.54",
-    "waveform-react": "^0.2.3"
+    "wavesurfer.js": "3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
