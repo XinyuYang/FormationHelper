@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import WaveSurfer from 'wavesurfer.js';
 
-// .ebee
 export default class Wave extends Component {
 
     componentDidMount() {
