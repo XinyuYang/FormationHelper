@@ -23,7 +23,6 @@ class StageSection extends Component {
 
     render() {
         return (
-            <Grid item xs={10}>
                 <div className="Stage" style={{direction:"column", justify:"center", alignItems: "center", position: 'relative'}}>
                     {/* TODO: Use Grid for now, but should be replaced with a canvas component that can specify the position*/}
                     {/* Dot only works using div */}
@@ -32,7 +31,6 @@ class StageSection extends Component {
                         <Dot name = {'dot'+index} color = "#000000" />
                     )}
                 </div>
-            </Grid>
         )
     }
 }
@@ -51,9 +49,9 @@ export default function FormationCanvas(formationInfo){
                     <Typography>Off Stage</Typography>
                 </div>
 
-                <div className="Stage">
-                     <StageSection dancer={formationInfo.dancerNumber}/>
-                </div>
+
+                <StageSection dancer={formationInfo.dancerNumber}/>
+
 
                 <div className="RightStage">
                     <Typography>Off Stage</Typography>
