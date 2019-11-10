@@ -1,11 +1,9 @@
 package com.formationHelper.formationHelper.Model;
 
-import com.formationHelper.formationHelper.Time;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "formation")

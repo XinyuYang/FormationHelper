@@ -1,7 +1,6 @@
 package com.formationHelper.formationHelper.Model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "user")
