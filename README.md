@@ -221,3 +221,8 @@ Meeting for 10.27
 1. 前后端结合 - 后端方面的API使用方法，在前端调用
 2. 整个队形的存储？Cloud？
 
+Meeting for 11.10
+1. 后端部分把测试写好
+2. merge进主branch
+3. 关于api的使用写一份doc
+4. 整理前端的任务
