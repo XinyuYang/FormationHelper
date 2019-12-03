@@ -40,7 +40,62 @@
         http://localhost:8080/deleteUser/12
 
 2. Dance
+    - ```getAllDance(Integer userId, Pageable pageable) -> GET```
+        - Description: load all the dances given the userId
+        - Url: http://localhost:8080/user/{userId}/getAllDance
+        - Example: load all the dances of user with id 12
+        http://localhost:8080/user/12/getAllDance
+    - ```addDance(Integer userId, Dance dance) -> POST```
+        - Description: add a new dance to the dancer with specified id. Throw exception if user is null.
+        - Url: http://localhost:8080/user/{userId}/createDance
+        - Request Body:
+        ```json
+        {
+          "numDancers" : "10",
+          "dance_name" : "Worth it",
+          "music_url" : "http://example_url"
+        }
+        ```
+        - Example: add a dance to the dancer with id 12
+        http://localhost:8080/user/12/createDance
+    - ```saveDance(Integer userId, Integer danceId, Dance danceRequest) -> PUT```
+        - Description: update the specified dance of specified dancer. Throw exception if user or dance is null.
+        - Url: http://localhost:8080/user/{userId}/saveDance/{danceId}
+    - ```deleteDance(Integer userId, Integer danceId) -> DELETE```
+        - Description: delete the specified dance of the specified user. Throw exception if user or dance is null.
+        - Url: http://localhost:8080/user/{userId}/saveDance/{danceId}  
 
 3. Formation
-
+    - ```getAllFormations(Integer danceId, Pageable pageable) -> GET```
+        - Description: get all formation of the specified dance
+        - Url: http://localhost:8080/dance/{danceId}/getAllFormations
+    - ```addDance(Integer danceId, Formation formation) -> POST```
+        ???
+    - ```saveFormation(Integer danceId, Integer formationId, Formation formationRequest) -> PUT```
+        - Description: save the specified formation of the specified dance
+        - Url: http://localhost:8080/dance/{danceId}/saveFormation/{formationId}
+    - ```deleteFormation(Integer danceId, Integer formationId) -> DELETE```
+        - Description: delete the specified formation of the specified dance
+        - Url: http://localhost:8080/dance/{danceId}/deleteFormation/{formationId}
+        
 4. Dancer
+    - ```getAllDancers(Integer formationId, Pageable pageable) -> GET```
+        - Description: load all the dancers given the formationId
+        - Url: http://localhost:8080/formation/{formationId}/getAllDancers
+        - Example: load all the dancers of formation with id 30
+        http://localhost:8080/formation/30/getAllDancers
+    - ```addDancer(Integer formationId, Dancer dancer) -> POST```
+        - Description: add a dancer to the specified formation
+        - Url: http://localhost:8080/formation/{formationId}/addDancer. Throw exception if formation is null.
+        - Example: add a dancer to the formation with id 30
+        http://localhost:8080/formation/30/addDancer
+    - ```saveDancer(Integer formationId, List<Dancer> dancersRequest) -> PUT```
+        - Description: save the information of all dancers to the specified formation. Throw exception if formation is null.
+        - Url: http://localhost:8080/formation/{formationId}/updateAllDancers
+        - Example: save all dancers to the formation with id 30
+        http://localhost:8080/formation/30/updateAllDancers
+    - ```deleteDancer(Integer formationId, Integer dancerId) -> DELETE```
+        - Description: delete the specified dancer in the specified formation. Throw exception if formation is null.
+        - Url: http://localhost:8080/formation/{formationId}/deleteDancer/{dancerId}
+        - Example: delete the dancer with id 10 in the formation with id 30
+        http://localhost:8080/formation/30/deleteDancer/10
