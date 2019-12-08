@@ -226,3 +226,12 @@ Meeting for 11.10
 2. merge进主branch
 3. 关于api的使用写一份doc
 4. 整理前端的任务
+
+Meeting for 12.8
+1. Code Refractory
+    1. 删除不需要的文件和readme等，最后剩下一个folder是前端一个folder是后端，一个readme
+    2. 临时的文件应该都gitignore，比如 .idea
+2. 前端后端连接
+    1. doc里面的端口都可以调用
+3. 前端的分页功能
+4. 数据在云端的存储，把数据迁移到云端数据库
