@@ -1,9 +1,9 @@
-package com.formationHelper.Controller;
+package formationHelper.Controller;
 
-import com.formationHelper.Exception.ResourceNotFoundException;
-import com.formationHelper.Model.Dancer;
-import com.formationHelper.Repository.DancerRepository;
-import com.formationHelper.Repository.FormationRepository;
+import formationHelper.Exception.ResourceNotFoundException;
+import formationHelper.Model.Dancer;
+import formationHelper.Repository.DancerRepository;
+import formationHelper.Repository.FormationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

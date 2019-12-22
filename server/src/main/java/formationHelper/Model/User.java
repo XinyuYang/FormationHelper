@@ -1,4 +1,4 @@
-package com.formationHelper.Model;
+package formationHelper.Model;
 
 import javax.persistence.*;
 import java.io.Serializable;

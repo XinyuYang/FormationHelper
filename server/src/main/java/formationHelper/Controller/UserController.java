@@ -1,8 +1,8 @@
-package com.formationHelper.Controller;
+package formationHelper.Controller;
 
-import com.formationHelper.Exception.ResourceNotFoundException;
-import com.formationHelper.Model.User;
-import com.formationHelper.Repository.UserRepository;
+import formationHelper.Exception.ResourceNotFoundException;
+import formationHelper.Model.User;
+import formationHelper.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

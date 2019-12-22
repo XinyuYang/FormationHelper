@@ -1,6 +1,6 @@
-package com.formationHelper.Repository;
+package formationHelper.Repository;
 
-import com.formationHelper.Model.Dancer;
+import formationHelper.Model.Dancer;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

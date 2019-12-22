@@ -1,4 +1,4 @@
-package com.formationHelper.Model;
+package formationHelper.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.OnDelete;
