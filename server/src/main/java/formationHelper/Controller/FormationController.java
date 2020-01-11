@@ -1,6 +1,7 @@
 package formationHelper.Controller;
 
 import formationHelper.Exception.ResourceNotFoundException;
+import formationHelper.Model.Dance;
 import formationHelper.Model.Formation;
 import formationHelper.Repository.DanceRepository;
 import formationHelper.Repository.FormationRepository;
@@ -10,6 +11,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.swing.text.html.Option;
+import java.text.Normalizer;
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class FormationController {
@@ -56,12 +62,25 @@ public class FormationController {
         }).orElseThrow(() -> new ResourceNotFoundException("Formation Id "+formationId+" Not Found"));
     }
 
-    //TODO: Add one methods to save all formations at once (equivalent to save dance)
+    //Added one methods to save all formations at once (equivalent to save dance)
     // => corresponds to save dance button
     // This will save all the formations
+    // TODO: First delete all then save!! (There may be better solutions)
     @PutMapping("/dance/{danceId}/saveAllFormations")
-    public String saveAllFormation(@PathVariable (value="danceId") Integer danceId){
-        return "Successfully saved";
+    public String saveAllFormation(@PathVariable (value="danceId") Integer danceId, @RequestBody List<Formation> allFormations){
+        if(!danceRepository.existsById(danceId)) {
+            throw new ResourceNotFoundException("danceId " + danceId + " not found");
+        }
+        Optional<Dance>  dance= danceRepository.findById(danceId);
+        if (dance.isPresent()){
+            for(Formation formation: allFormations){
+                formation.setDance(dance.get());
+                formationRepository.save(formation);
+            }
+            return "Successfully saved";
+        } else{
+            return danceId + " is not presented";
+        }
     }
 
     @DeleteMapping("/dance/{danceId}/deleteFormation/{formationId}")

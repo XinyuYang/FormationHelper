@@ -19,14 +19,18 @@ public class DanceController {
     private UserRepository userRepository;
 
     // Get all of the dances created by the owner of the account
-    @GetMapping("/user/{userId}/getAllDance")
-    public @ResponseBody Page<Dance>getAllDance(@PathVariable (value = "userId") Integer userId,
+    @GetMapping("/user/{userId}/getAllDances")
+    public @ResponseBody Page<Dance>getAllDancesFromUser(@PathVariable (value = "userId") Integer userId,
                                   Pageable pageable){
         return danceRepository.findByUserId(userId, pageable);
     }
 
-    //TODO: add a method to get all dances from the server
+    // Added a method to get all dances from the server
     // implement a proper search method (E.G. return all dances from server with a Pageable, sorted by alphabetical order)
+    @GetMapping("/getAllDances")
+    public @ResponseBody Page<Dance>getAllDances(Pageable pageable){
+        return danceRepository.findAll(pageable);
+    }
 
     @PostMapping("/user/{userId}/createDance")
     public @ResponseBody Dance addDance(@PathVariable(value = "userId") Integer userId,
