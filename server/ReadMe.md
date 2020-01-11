@@ -1,5 +1,5 @@
 ## Database Schema and APIs Documentation
-    ![Databse](/server/dbSchema.png)
+    ![Databse](https://github.com/XinyuYang/FormationHelper/raw/master/server/dbSchema.png)
 #### How to Deploy the Server Locally
 1. Setup mysql and configure database on your local machine
     - If you haven't install MySQL, install it!
