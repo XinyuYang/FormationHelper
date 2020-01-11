@@ -25,13 +25,20 @@ Last week's task:
 2. 前端后端连接
     1. doc里面的端口都可以调用
 3. 前端的分页功能
-4. 数据在云端的存储，把数据迁移到云端数据库
+4. 数据在云端的存储，把数据迁移到云端数据库 // deploy之后一并打包到云端？
 
 Upcoming Week:
 0. Pagination.
 1. Slight modifications on server-side:
     1. User: how to get userId for deletion? Is it generated when adding a user? Should we provide it randomly from the frontend?
+    
+        **The User might not be a good choice for login purpose. Since we might have teacher account and student account, we might want to use more complicated Spring module such as Spring Security to implement the login purpose. Fix this later!**
+
     2. Dance & Formation: the usage for the two classes seems a little redundant. 
+        
+        - **I feel like the relationship between Formation and Dance is similar to the pages in a book. A Dance might have several formations, each individual formation will have its own properties such as d**
+        - Not sure some of the properties related to music should belong to formation or dance => depends on the implementation logic of pagination based on music time from the front end (What should the backend provide to enable pingination => need clarification)
+        
     3. We need to store the coordinates for all dancers in all pages at the server. We may not need a Dancer class, because we only want to send the request once - when the user click on the save dance button on the screen. So eventually we may only need one user class and one dance class. UserId may not be needed in fetching dances, because if in the future, we want the user to be able to find other people's dances, it would be nice that they can browse all available dances on the server. However, we do want to keep the current method of getting all dancers by userId as well. In the Dance class, these info should be stored:
         1. Dance name
         2. Music
@@ -49,6 +56,16 @@ Upcoming Week:
              "formation": ["(0.0, 0.0), (0.0, 0.0), (0.0, 0.0)"],
             }]
            The formation part is just a simple design as an example. There should be a better and cleaner way of doing this. We may need to modify and to see how to make sure the page number and gaps in Music and number of elements in formation list in Dancer are all the same. This should be done at the front end before passing in the data, so currently we are not checking it here.
+        
+        Comments:
+        - The above database design does not fit the relational MySQL database => it can be used in MongoDB/Google Reatime Database (Key-Value storage)
+        - I think the current database works well for the problem mentioned above => only need  to implement a few more methods listed below:
+            1. PUT: updateAllFormation(Integer danceId);
+                *This will save update/save all the formation inside one dance at once.*
+            2. GET: getAllDance();
+                *This will get allDances from the database in a Pageable form that is sorted by alphabetical order*
+                *Allowing the feature to browse all formations from the site*
+        - Should we provide the feature to allow the user to save each individual formation? Is that helpful at all? When we implement auto-save feature in the future, should we auto-save individual formation or all formation inside a dance?
 2. Hook up front end and server side once the 1. is done.
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

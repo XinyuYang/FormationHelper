@@ -22,6 +22,8 @@ public class DancerController {
     @Autowired
     private DancerRepository dancerRepository;
 
+
+    // This allow front ened to view the information of all dancers
     @GetMapping("/formation/{formationId}/getAllDancers")
     public @ResponseBody Page<Dancer> getAllDancers(@PathVariable(value = "formationId") Integer formationId,
                                                        Pageable pageable){

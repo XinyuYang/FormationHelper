@@ -34,6 +34,11 @@ public class FormationController {
         }).orElseThrow(() -> new ResourceNotFoundException("DanceId "+danceId+" Not Found"));
     }
 
+
+    // This method is used to save each individual formation inside a dance.
+    //TODO: maybe we do not need this (Shall we implement the method for user to save individual formation
+    // Is this method required if we wanna implement autosave feature for each formation?
+    // Should the autosave feature autosave all formations at once or only one formation?    !!!!IMPORTANT
     @PutMapping("/dance/{danceId}/saveFormation/{formationId}")
     public @ResponseBody Formation saveFormation(@PathVariable (value="danceId") Integer danceId,
                                          @PathVariable (value="formationId") Integer formationId,
@@ -50,6 +55,15 @@ public class FormationController {
             return formationRepository.save(formation);
         }).orElseThrow(() -> new ResourceNotFoundException("Formation Id "+formationId+" Not Found"));
     }
+
+    //TODO: Add one methods to save all formations at once (equivalent to save dance)
+    // => corresponds to save dance button
+    // This will save all the formations
+    @PutMapping("/dance/{danceId}/saveAllFormations")
+    public String saveAllFormation(@PathVariable (value="danceId") Integer danceId){
+        return "Successfully saved";
+    }
+
     @DeleteMapping("/dance/{danceId}/deleteFormation/{formationId}")
     public ResponseEntity<?> deleteFormation(@PathVariable (value = "danceId") Integer danceId,
                                          @PathVariable (value = "formationId") Integer formationId){
