@@ -1,5 +1,5 @@
 ## Database Schema and APIs Documentation
-    ![avatar](server/ReadMe.md)
+    ![Databse](dbSchema.png)
 #### How to Deploy the Server Locally
 1. Setup mysql and configure database on your local machine
     - If you haven't install MySQL, install it!
