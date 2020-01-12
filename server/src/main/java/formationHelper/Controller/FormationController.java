@@ -24,6 +24,13 @@ public class FormationController {
     @Autowired
     private FormationRepository formationRepository;
 
+    /**
+     * This method is used to get all the formations inside one dance
+     * It can be used for pagination (before pagination -> get all formations from dance sorted by start time -> show each formation according to music time frame)
+     * @param danceId
+     * @param pageable
+     * @return
+     */
     @GetMapping("/dance/{danceId}/getAllFormations")
     public @ResponseBody
     Page<Formation> getAllFormations(@PathVariable(value = "danceId") Integer danceId,
@@ -39,7 +46,6 @@ public class FormationController {
             return formationRepository.save(formation);
         }).orElseThrow(() -> new ResourceNotFoundException("DanceId "+danceId+" Not Found"));
     }
-
 
     // This method is used to save each individual formation inside a dance.
     //TODO: maybe we do not need this (Shall we implement the method for user to save individual formation
@@ -65,7 +71,7 @@ public class FormationController {
     //Added one methods to save all formations at once (equivalent to save dance)
     // => corresponds to save dance button
     // This will save all the formations
-    // TODO: First delete all then save!! (There may be better solutions)
+    // !!!!! First delete all then save!! (There may be better solutions)
     @PutMapping("/dance/{danceId}/saveAllFormations")
     public String saveAllFormation(@PathVariable (value="danceId") Integer danceId, @RequestBody List<Formation> allFormations){
         if(!danceRepository.existsById(danceId)) {
