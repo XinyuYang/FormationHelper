@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap');
+
+html, body {
+  background: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.window-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  background-color: #2a4eec; 
+}
+
+.app {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 40px);
+
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+
+  background-color: #f4f5f9;
+}
+
+.content-container {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+}
+
+/* Component styles: */
+
+.button {
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  outline: 0;
+  border: 0;
+  border-radius: 6px;
+  transition: 0.1s linear all;
+  cursor: pointer;
+}
+
+.primary-button {
+  @extend .button;
+  background-color: #2a4eec;
+  color: #ffffff;
+
+  /* For icons */
+  svg {stroke: #ffffff;}
+
+  &:hover {
+    box-shadow: 0px 0px 4px 1px #2a4eec40;
+  }
+}
+
+.primary-light-button {
+  @extend .button;
+  background-color: #2a4eec15;
+  color: #2a4eec;
+
+  /* For icons */
+  svg {stroke: #2a4eec;}
+
+  &:hover {
+    background-color: #2a4eec;
+    color: #ffffff;
+    svg {stroke: #ffffff;}
+  }
+}
+
+.light-button {
+  @extend .button;
+  background-color: #ffffff00;
+  color: #2a4eec;
+
+  /* For icons */
+  svg {stroke: #2a4eec;}
+
+  &:hover {
+    background-color: #2a4eec;
+    color: #ffffff;
+    svg {stroke: #ffffff;}
+  }
+}
