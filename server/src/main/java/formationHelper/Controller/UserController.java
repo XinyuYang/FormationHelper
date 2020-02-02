@@ -8,6 +8,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * This class might be removed in the future
+ * after implementing Spring Security to manage log in and log out feature
+ * to control different kinds of accounts with different levels of authority
+ */
 @Controller
 public class UserController {
     @Autowired
