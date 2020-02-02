@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Controller
 public class DancerController {
@@ -22,8 +21,9 @@ public class DancerController {
     @Autowired
     private DancerRepository dancerRepository;
 
-
-    // This allow front ened to view the information of all dancers
+    // Function: get all the dancers inside a specific formation
+    // Usage: This allow front ened to view the information of all dancers
+    // TODO: Consider moving function to danceController?
     @GetMapping("/formation/{formationId}/getAllDancers")
     public @ResponseBody Page<Dancer> getAllDancers(@PathVariable(value = "formationId") Integer formationId,
                                                        Pageable pageable){
@@ -31,8 +31,10 @@ public class DancerController {
     }
 
     /**
-     *  Add one dancer to the current formation with initial x, y positions
-     *  Initial x, y position not specified yet.
+     * Function: Add one dancer to the current formation with initial x, y positions
+     *  (Initial x, y position not specified yet)
+     * Usage: can be used for the "add_dancer" button for a formation
+     * TODO: Consider moving function to danceController?
      * @param formationId
      * @param dancer
      */
@@ -48,8 +50,8 @@ public class DancerController {
     }
 
     /**
-     * Update all dancers in the specified formation
-     * Mainly use for changing the x,y positions of all dancers in a given formation
+     * Function: Update all dancers in the specified formation
+     * Usage: Mainly use for changing the x,y positions of all dancers in a given formation
      * @param formationId
      * @param dancersRequest
      * @return
@@ -72,6 +74,14 @@ public class DancerController {
         }
         return result;
     }
+    
+    /**
+     * Function: delete a specific dancer inside a formation and dance
+     * Usage: first delete then update => use together with the PutMapping above
+     * @param formationId
+     * @param dancerId
+     * @return
+     */
     @DeleteMapping("/formation/{formationId}/deleteDancer/{dancerId}")
     public ResponseEntity<?> deleteDancer(@PathVariable (value = "formationId") Integer formationId,
                                          @PathVariable (value = "dancerId") Integer dancerId){
