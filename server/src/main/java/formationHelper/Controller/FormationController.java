@@ -12,8 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
-import java.text.Normalizer;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,8 +23,8 @@ public class FormationController {
     private FormationRepository formationRepository;
 
     /**
-     * This method is used to get all the formations inside one dance
-     * It can be used for pagination (before pagination -> get all formations from dance sorted by start time -> show each formation according to music time frame)
+     * Function: This method is used to get all the formations inside one dance
+     * Usage: It can be used for pagination (before pagination -> get all formations from dance sorted by start time -> show each formation according to music time frame)
      * @param danceId
      * @param pageable
      * @return
@@ -38,6 +36,13 @@ public class FormationController {
         return formationRepository.findByDanceId(danceId, pageable);
     }
 
+    /**
+     * Function: add a new formation in a dance and update database
+     * Usage: call this method when creating a new formation
+     * @param danceId
+     * @param formation
+     * @return
+     */
     @PostMapping("/dance/{danceId}/createFormation")
     public @ResponseBody Formation addDance(@PathVariable(value = "danceId") Integer danceId,
                                         @RequestBody Formation formation){
@@ -89,6 +94,8 @@ public class FormationController {
         }
     }
 
+    // Function: delete a specific formation in a specific dance
+    // Usage: call this API before calling the two PutMappings above
     @DeleteMapping("/dance/{danceId}/deleteFormation/{formationId}")
     public ResponseEntity<?> deleteFormation(@PathVariable (value = "danceId") Integer danceId,
                                          @PathVariable (value = "formationId") Integer formationId){
